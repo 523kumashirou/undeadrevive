@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html href="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>UNDEAD REVIVE</title>
+    <link rel="stylesheet" href="css/style.css">
+	  
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Saira+Condensed:wght@300&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+	  
+  </head>
+	
+  <body>
+	  <header>
+  <h1 class="logo">
+    <a href="index.html">UNDEAD REVIVE</a>
+  </h1>
+  <nav>
+    <ul>
+      <li><a href="character.html">CHARACTER</a></li>
+      <li><a href="world.html">WORLD</a></li>
+      <li><a href="story.html">STORY</a></li>
+    </ul>
+  </nav>
+</header>
+
+	  <main>
+		  <section class="hero">
+			  <img src="images/allblack.png" alt="BLACK" class="hero-image">
+			  <div class="hero-box">
+				  <h2>特異現象対策課 第７班 任務開始</h2>
+			  </div>
+		  </section>
+		  
+		  <section class="character-list">
+			  <h2>MAIN CHARACTER</h2>
+			  
+  <div class="icon-grid">
+	  
+	   
+	  <div class="character-card" onclick="openPopup('popup-higiri')">
+  <div class="icon-wrapper">
+    <img src="images/3/3-1.png" alt="1" class="character-icon">
+  </div>
+  <h3 class="character-name">別火 緋桐</h3>
+</div>
+
+<div class="popup-overlay" id="popup-higiri" onclick="closePopup(this)">
+  <div class="popup-content" onclick="event.stopPropagation()">
+    <span class="close-btn" onclick="closePopup(this.closest('.popup-overlay'))">&times;</span>
+	  <img src="images/3/3-1.png" alt="higiri" class="popup-image">
+    <h2>別火 緋桐</h2>
+    <p>チームのリーダー。<br>
+		命を奪うことも躊躇わない、<br>
+		冷酷な現実主義者。</p>
+	   <a href="character.html#higiri" class="more-btn">MORE →</a>
+  </div>
+</div>
+	  
+	  <div class="character-card" onclick="openPopup('popup-mikage')">
+  <div class="icon-wrapper">
+    <img src="images/3/3-2.png" alt="2" class="character-icon">
+  </div>
+  <h3 class="character-name">青天目 海影</h3>
+</div>
+
+<div class="popup-overlay" id="popup-mikage" onclick="closePopup(this)">
+  <div class="popup-content" onclick="event.stopPropagation()">
+    <span class="close-btn" onclick="closePopup(this.closest('.popup-overlay'))">&times;</span>
+	  <img src="images/3/3-2.png" alt="mikage" class="popup-image">
+    <h2>青天目 海影</h2>
+    <p>人を揶揄って楽しむ気まぐれ屋。<br>
+		常に飄々とした態度で、<br>
+		内面は理性的。</p>
+	   <a href="character.html#mikage" class="more-btn">MORE →</a>
+  </div>
+</div>
+	  
+	<div class="character-card" onclick="openPopup('popup-shino')">
+  <div class="icon-wrapper">
+    <img src="images/3/3-3.png" alt="3" class="character-icon">
+  </div>
+  <h3 class="character-name">蛇目 紫乃</h3>
+</div>
+
+<div class="popup-overlay" id="popup-shino" onclick="closePopup(this)">
+  <div class="popup-content" onclick="event.stopPropagation()">
+    <span class="close-btn" onclick="closePopup(this.closest('.popup-overlay'))">&times;</span>
+	  <img src="images/3/3-3.png" alt="shino" class="popup-image">
+    <h2>蛇目 紫乃</h2>
+    <p>冷静で知的、皮肉屋の策士。<br>
+		チームを信用しているが、<br>
+		信頼はしきっていない中堅メンバー。</p>
+	   <a href="character.html#shino" class="more-btn">MORE →</a>
+  </div>
+</div>  
+	  
+	 	<div class="character-card" onclick="openPopup('popup-jun')">
+  <div class="icon-wrapper">
+    <img src="images/3/3-4.png" alt="4" class="character-icon">
+  </div>
+  <h3 class="character-name">雷明 純</h3>
+</div>
+
+<div class="popup-overlay" id="popup-jun" onclick="closePopup(this)">
+  <div class="popup-content" onclick="event.stopPropagation()">
+    <span class="close-btn" onclick="closePopup(this.closest('.popup-overlay'))">&times;</span>
+	  <img src="images/3/3-4.png" alt="jun" class="popup-image">
+    <h2>雷明 純</h2>
+    <p>明るく人懐っこい、<br>
+		平和主義のカニバリスト。<br>
+	  掴みどころのない陰の支配者。</p>
+	   <a href="character.html#jun" class="more-btn">MORE →</a>
+  </div>
+</div>  
+	   
+	  <div class="character-card" onclick="openPopup('popup-satsuki')">
+  <div class="icon-wrapper">
+    <img src="images/3/3-5.png" alt="5" class="character-icon">
+  </div>
+  <h3 class="character-name">風嵐 冴月</h3>
+</div>
+
+<div class="popup-overlay" id="popup-satsuki" onclick="closePopup(this)">
+  <div class="popup-content" onclick="event.stopPropagation()">
+    <span class="close-btn" onclick="closePopup(this.closest('.popup-overlay'))">&times;</span>
+	  <img src="images/3/3-5.png" alt="satsuki" class="popup-image">
+    <h2>風嵐 冴月</h2>
+    <p>本能で動く戦闘狂。<br>
+		理屈より衝動、<br>
+	  己のままに突き進む異常者。</p>
+	   <a href="character.html#satsuki" class="more-btn">MORE →</a>
+  </div>
+</div>  
+	  
+	<div class="character-card" onclick="openPopup('popup-toa')">
+  <div class="icon-wrapper">
+    <img src="images/3/3-6.png" alt="6" class="character-icon">
+  </div>
+  <h3 class="character-name">十六原 橙空</h3>
+</div>
+
+<div class="popup-overlay" id="popup-toa" onclick="closePopup(this)">
+  <div class="popup-content" onclick="event.stopPropagation()">
+    <span class="close-btn" onclick="closePopup(this.closest('.popup-overlay'))">&times;</span>
+	  <img src="images/3/3-6.png" alt="toa" class="popup-image">
+    <h2>十六原 橙空</h2>
+    <p>優しく穏やかなサポーター。<br>
+		ときどきミステリアスな面を見せる、<br>
+	  確かな意志を隠す青年。</p>
+	   <a href="character.html#toa" class="more-btn">MORE →</a>
+  </div>
+</div>    
+	  
+	  <div class="character-card" onclick="openPopup('popup-hakua')">
+  <div class="icon-wrapper">
+    <img src="images/3/3-7.png" alt="7" class="character-icon">
+  </div>
+  <h3 class="character-name">蘇和 白愛</h3>
+</div>
+
+<div class="popup-overlay" id="popup-hakua" onclick="closePopup(this)">
+  <div class="popup-content" onclick="event.stopPropagation()">
+    <span class="close-btn" onclick="closePopup(this.closest('.popup-overlay'))">&times;</span>
+	  <img src="images/3/3-7.png" alt="hakua" class="popup-image">
+    <h2>蘇和 白愛</h2>
+    <p>正義感の強い天真爛漫な少女。<br>
+		歪んだ世界でも、<br>
+		人を信じることをやめない。</p>
+	   <a href="character.html#hakua" class="more-btn">MORE →</a>
+  </div>
+</div>    
+	  
+	  <div class="character-card" onclick="openPopup('popup-lobe')">
+  <div class="icon-wrapper">
+    <img src="images/3/3-8.png" alt="8" class="character-icon">
+  </div>
+  <h3 class="character-name">ロベリア<br>カーディナリス</h3>
+</div>
+
+<div class="popup-overlay" id="popup-lobe" onclick="closePopup(this)">
+  <div class="popup-content" onclick="event.stopPropagation()">
+    <span class="close-btn" onclick="closePopup(this.closest('.popup-overlay'))">&times;</span>
+	  <img src="images/3/3-8.png" alt="lobe" class="popup-image">
+    <h2>ロベリア<br>カーディナリス</h2>
+    <p>命の重さを受け止める、<br>
+		思慮深き指揮官。<br>
+	  迷いながらも、生かす道を選ぶ。</p>
+	   <a href="character.html#lobe" class="more-btn">MORE →</a>
+  </div>
+</div>    
+	  
+			  </div> 
+			   <a href="character.html" class="more-btn">MORE →</a>
+  </section>
+		    
+<h2 class="world-title">WORLD</h2>
+<section class="world-section"> 
+  <h3 class="world-catch">「正義」は、人の数だけ存在する。</h3>
+  <p class="world-intro">
+    殺す理由も、生きる理由も。<br>
+    この世界は、異常だった。<br><br>
+    混沌の中で見つける、小さな希望の光。<br>
+    それが、彼らに残された唯一の道だった。
+  </p>
+  <a href="world.html" class="more-btn world-btn">MORE →</a>
+</section>
+
+	  </main>
+	
+ <footer>
+	  <h1 class="logo">
+    <a href="index.html">UNDEAD REVIVE</a>
+  </h1>  
+<p class="footer-credit">© 2025 UNDEAD REVIVE PROJECT</p>
+<div class="footer-links">
+  <a href="character.html">CHARACTER</a>
+  <a href="world.html">WORLD</a>
+  <a href="story.html">STORY</a>
+</div>
+<div class="footer-social">
+  <a href="https://x.com/523kumashirou" target="_blank">X</a> /
+  <a href="https://www.pixiv.net/users/106754010" target="_blank">Pixiv</a> /
+  <a href="https://www.youtube.com/@kumashirou5233" target="_blank">youtube</a> /
+  <a href="https://www.tiktok.com/@kumashirou523" target="_blank">TikTok</a> /
+  <a href="https://marshmallow-qa.com/9b50gl3qi54289k" target="_blank">マシュマロ</a>
+	
+  <!--<a href="https://skeb.jp/@523kumashirou" target="_blank">skeb</a>-->
+</div>
+<p class="footer-note">
+本作品はフィクションです。実在の人物・団体・事件などとは一切関係ありません。  <br>
+本サイトに掲載されているすべての画像・文章の著作権は制作者に帰属します。  <br>
+無断転載・二次配布を固く禁じます。<br>  
+<br>
+This work is a fiction. <br>
+Any resemblance to actual persons, organizations, or events is purely coincidental.  <br>
+All images and texts on this site are copyrighted by the creator.  <br>
+Unauthorized reproduction or redistribution is strictly prohibited.
+</p>
+</footer>
+  
+	  
+	  
+	  
+	  
+	  
+	<script>
+	 function openPopup(id) {
+    const popup = document.getElementById(id);
+    if (popup) popup.style.display = 'flex';
+  }
+
+  function closePopup(el) {
+    if (el) el.style.display = 'none';
+  }
+
+  // ページ読み込み時に強制的に非表示にしておく（保険）
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.popup-overlay').forEach(el => {
+      el.style.display = 'none';
+    });
+  });
+
+</script>
+
+  </body>
+
+</html>

@@ -1,0 +1,3084 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHARACTER</title>
+  <link rel="stylesheet" href="css/style.css">
+	  
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Saira+Condensed:wght@300&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+	
+</head>
+<body>
+	
+<header>
+  <h1 class="logo">
+    <a href="index.html">UNDEAD REVIVE</a>
+  </h1>
+  <nav>
+    <ul>
+      <li><a href="character.html">CHARACTER</a></li>
+      <li><a href="world.html">WORLD</a></li>
+      <li><a href="story.html">STORY</a></li>
+    </ul>
+  </nav>
+</header>
+	
+	<section class="character-list">
+			  <h2>MAIN CHARACTER</h2>
+	</section>
+	
+	<section class="character-slider">
+  <!-- 表示エリア -->
+		<!-- 緋桐 -->
+  <div class="character-slide active" id="higiri">
+	   <div class="slide-content">
+	    <div class="title-box">
+			<h1>別火 緋桐</h1>
+			<h2>BEKKA HIGIRI</h2>
+	  </div>
+	    <div class="content">
+			<img src="images/2/2-1.png" alt="higir" class="main-image">	
+			<div class="text-box">
+		  <h3>
+			年   齢：25歳<br>
+			誕生日：６/６<br>
+			身   長：180cm<br>
+			所   属：オーゼルグ機構<br>
+			<span>　　　　特異現象対策課 第７班</span>
+			  <br>
+			  <span>　　　　班長</span>　　　	  
+			<br>
+			ファクター：炎<br>
+			武器：オートマチックの拳銃(二丁)<br>
+			好きなこと：武器のお手入れ<br>
+			好きな食べ物：サンド、バーガー系<br>
+			苦手なもの：白愛<br>
+			嫌いなもの：火、父<br>
+			人　　称：俺 / お前<br>
+			家族構成：父、母(他界)
+		  </h3>
+		  </div>
+		   </div>
+	   <div class="profile-box">
+    <p>特異現象対策課 第７班 班長。無口で冷酷な現実主義者。<br>
+	判断力に優れ、指示が出れば迷わず人の命も奪える。<br>
+	第７班での戦闘スキルは総合で最強、射撃は百発百中。<br>
+	不気味な赤い目が特徴で、「悪魔」と呼ぶ者もいる。<br>
+	上半身に大きく瘢痕が残っている。
+	  </p>
+	  </div>
+		   
+	<div class="quote-box">
+    <p>「理解されてたまるか。」<br>
+		「うるせェな、黙れよ。」<br>
+		「誰の飼い主に喧嘩売ってるか分かってんのか？」
+	</p>
+	</div>
+		   
+		 <!-- ▼過去をみるボタン -->
+<div class="past-trigger">
+  <button id="openPast">BACKGROUND</button>
+</div>
+
+<!-- ▼ポップアップ内容 -->
+<div id="pastModal" class="past-modal">
+  <div class="past-content">
+    <span id="closePast" class="close-btn">&times;</span>
+
+
+    <div class="past-timeline">
+      <div class="past-card">
+        <span class="past-age">出生</span>
+        <p>真っ赤な目を、父を含む周囲に気味悪がられ、<br>
+		母だけが味方だった。</p>
+      </div>
+
+      <div class="past-card">
+        <span class="past-age">10歳</span>
+        <p>深夜の火災で母に庇われ、遺体すら残らなかった。<br>
+		父と二人になったが、火傷を負った緋桐を「悪魔」と罵り、<br>
+		次第にネグレクトするようになる。
+		</p>
+      </div>
+
+      <div class="past-card">
+        <span class="past-age">13歳</span>
+        <p>母を失い、頼れる人もいなくなった緋桐は家を出た。<br>
+		行き着いた街で抗争に巻き込まれ、研究施設に保護された。
+		  </p>
+      </div>
+
+      <div class="past-card">
+        <span class="past-age">14歳</span>
+        <p>1年間の施術でファクターを与えられる。<br>
+		施設を出てロベリア管轄の<br>
+		特異現象対策課 第0班(育成課)に加入。
+		  </p>
+      </div>
+		
+		<div class="past-card">
+        <span class="past-age">17歳</span>
+        <p>次第にファクターや戦闘技術も安定し、<br>
+		単独で任務を任されるようになる。</p>
+      </div>
+		
+		<div class="past-card">
+        <span class="past-age">20歳</span>
+        <p>ロベリアの判断で海影と特異現象対策課 第7班、結成。</p>
+      </div>
+		
+		<div class="past-card">
+        <span class="past-age">25歳</span>
+        <p>現在。</p>
+      </div>
+		
+		
+		
+		
+		
+		
+		
+		
+    </div>
+  </div>
+</div>
+
+<!-- ▼ファクターについて -->
+<div class="ability-trigger">
+  <button id="openAbility-higiri">FACTOR PROFILE</button>
+</div>
+		   
+<div class="ability-modal" id="abilityModal-higiri">
+  <div class="ability-content">
+    <span class="close-btn" id="closeAbility-higiri">&times;</span>		
+	  <div class="ability-box">
+	
+	  <h2>FACTOR PROFILE</h2>
+  <div class="ability-data">
+    <p>種類：炎</p>
+    <p>特徴：炎を操ることができる。<br>
+	一度拳を握り締めてから離すと炎を生み出し、<br>
+	軽く払うだけで消すことができる。<br>
+	自身の炎に触れても熱やダメージは一切干渉せず、炎との相性が良い。<br>
+	本人がその気になれば、大量の水を一瞬で蒸発させるほどの熱量を放つ。</p>
+    <p>備考：強すぎるほどの素質を持つが、火事で母を失った過去から、ファクターの使用を避けている。</p>
+  </div>
+</div>
+ </div>
+</div>
+		   
+<section class="relationship-section">
+  <h2>RELATIONSHIP</h2>
+
+  <div class="timeline-container">
+    <button class="timeline-btn" data-popup="chapter1">Phase 1</button>
+    <button class="timeline-btn" data-popup="chapter1-mid">Phase 1.5</button>
+    <button class="timeline-btn coming-soon" disabled>Phase 2</button>
+  </div>
+
+  <!-- 第一章 -->
+  <div id="chapter1" class="relationship-popup">
+  <div class="popup-content">
+    <h2>Phase 1</h2>
+
+    <div class="popup-box">
+					
+			 <img src="images/3/3-2.png" alt="mikage" class="popup-icon">
+		 <div class="popup-text">
+      <h3>海影</h3>
+      <p>「同期、になるのか？だる絡みしてきてうぜぇけど、5年も近くにいられたらもう慣れるしかなかった。言われた仕事はやってるし、実力は認める。」</p>
+		</div>
+    </div>
+
+    <div class="popup-box">
+		 <img src="images/3/3-3.png" alt="shino" class="popup-icon">
+	<div class="popup-text">
+      <h3>紫乃</h3>
+      <p>「後輩。大体のことは任せておける。加入当時より今の方が、自然体で接しやすい。俺に冗談も言うようになった。」</p>
+    </div>
+	  </div>
+
+	  <div class="popup-box">
+		 <img src="images/3/3-4.png" alt="jun" class="popup-icon">
+	<div class="popup-text">
+      <h3>純</h3>
+      <p>「後輩。バカだと思ってたがそうでもないらしい。怖いもの知らずなのか、度胸があるのか、どっちにしても変なヤツだ。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-5.png" alt="satsuki" class="popup-icon">
+	<div class="popup-text">
+      <h3>冴月、バカ</h3>
+      <p>「後輩。騒々しい、お前までだる絡みしてくんな。仕事ぶりは悪くねェから少しは黙ってろ。」</p>
+    </div>
+	  </div>
+		  
+	  <div class="popup-box">
+		 <img src="images/3/3-6.png" alt="toa" class="popup-icon">
+	<div class="popup-text">
+      <h3>橙空</h3>
+      <p>「後輩。ガキの割にはよくやってる。むしろ、その年で優秀すぎるくらいだ…考えすぎか。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-7.png" alt="hakua" class="popup-icon">
+	<div class="popup-text">
+      <h3>ガキ</h3>
+      <p>「…なんなんだよ、お前……」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-8.png" alt="lobe" class="popup-icon">
+	<div class="popup-text">
+      <h3>ロベリア</h3>
+      <p>「直属の上司。逆らう理由もねェよ、アンタにやれって言われたことやるだけだ。」</p>
+    </div>
+	  </div>
+	  
+    <button class="close-btn">&times;</button>
+  </div>
+</div>
+
+
+  <!-- 第一章・中盤 -->
+  <div id="chapter1-mid" class="relationship-popup">
+    <div class="popup-content">
+      <h2>Phase 1.5</h2>
+            <div class="popup-box">
+					
+			 <img src="images/3/3-2.png" alt="mikage" class="popup-icon">
+		 <div class="popup-text">
+      <h3>海影</h3>
+      <p>「良くも悪くも他人事だな、お前は。どうということもないが。」</p>
+		</div>
+    </div>
+
+    <div class="popup-box">
+		 <img src="images/3/3-3.png" alt="shino" class="popup-icon">
+	<div class="popup-text">
+      <h3>紫乃</h3>
+      <p>「器用なヤツ、最初からそうだったか。」</p>
+    </div>
+	  </div>
+
+	  <div class="popup-box">
+		 <img src="images/3/3-4.png" alt="jun" class="popup-icon">
+	<div class="popup-text">
+      <h3>純</h3>
+      <p>「心配はしてねェよ、バカじゃねェこともわかってる。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-5.png" alt="satsuki" class="popup-icon">
+	<div class="popup-text">
+      <h3>冴月、バカ</h3>
+      <p>「正直ガキ２人の面倒を押し付けているが、問題は無さそうだな。」</p>
+    </div>
+	  </div>
+		  
+	  <div class="popup-box">
+		 <img src="images/3/3-6.png" alt="toa" class="popup-icon">
+	<div class="popup-text">
+      <h3>橙空</h3>
+      <p>「お前、何か隠してるだろ。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-7.png" alt="hakua" class="popup-icon">
+	<div class="popup-text">
+      <h3>ガキ</h3>
+      <p>「殺せない？…甘えたこと抜かしてんなよ、クソガキが。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-8.png" alt="lobe" class="popup-icon">
+	<div class="popup-text">
+      <h3>ロベリア</h3>
+      <p>「…アンタがそうしろって言うなら、こっちは従うしかねェからな。」</p>
+    </div>
+	  </div>
+
+      <button class="close-btn">&times;</button>
+
+    </div>
+  </div>
+
+
+</section>
+		   	   
+  </div>
+		</div>	
+	
+		<!-- 海影 -->		
+  <div class="character-slide" id="mikage">
+	   <div class="slide-content">
+	    <div class="title-box">
+			<h1>青天目 海影</h1>
+			<h2>NABATAME MIKAGE</h2>
+	  </div>
+	    <div class="content">
+			<img src="images/2/2-2.png" alt="mikage" class="main-image">	
+			<div class="text-box">
+		  <h3>
+			年   齢：25歳<br>
+			誕生日：９/２１<br>
+			身   長：180cm<br>
+			所   属：オーゼルグ機構<br>
+			<span>　　　　特異現象対策課 第７班</span>
+			  <br>
+			  <span>　　　　副班長</span>　　　	  
+			<br>
+			ファクター：水<br>
+			武器：幅広く銃火器<br>
+			好きなこと：頼られること、ドライブ<br>
+			好きな食べ物：グミ<br>
+			苦手なもの：ファッションセンス<br>
+			嫌いなもの：女性の怒鳴り声<br>
+			人　　称：俺 / お前<br>
+			家族構成：父、母、兄
+		  </h3>
+		  </div>
+		   </div>
+	   <div class="profile-box">
+    <p>特異現象対策課 第７班 副班長。おちゃらけたまとめ役。<br>
+	第７班では唯一緋桐に敵う相手、移動時は運転係。<br>
+	視力が極めて良く、遠距離でも正確に捉える。<br>
+	端正で色気のある顔立ち、女性トラブルが絶えない。<br>
+	ときどき私服のダサTシャツで現れることがある。
+	  </p>
+	  </div>
+		   
+	<div class="quote-box">
+    <p>「俺のツラに免じて見逃してくれ。」<br>
+		「遅くなって悪い、まだ動けるか？」<br>
+		「まぁまぁ、頭冷やせよな。」
+	</p>
+	</div>
+		   
+		 <!-- ▼過去をみるボタン -->
+<div class="past-trigger">
+  <button id="openPast-mikage">BACKGROUND</button>
+</div>
+
+<!-- ▼ポップアップ内容 -->
+<div id="pastModal-mikage" class="past-modal">
+  <div class="past-content">
+    <span id="closePast-mikage" class="close-btn">&times;</span>
+
+
+    <div class="past-timeline">
+      <div class="past-card">
+        <span class="past-age">出生</span>
+        <p>幼い頃から十全十美な兄を尊敬していた。<br>
+		母の過剰な英才教育の中で、常に兄と比べられ続けた。<br>
+		それでも、兄だけはいつも海影を庇ってくれていた。</p>
+      </div>
+
+      <div class="past-card">
+        <span class="past-age">13歳</span>
+        <p>全教科満点を取っても、母には褒められなかった。<br>
+			「お兄ちゃんならこれくらいできたわ」と言われて絶望した。<br>
+			そのまま家を飛び出し、気づけば遠くの繁華街だった。
+		</p>
+      </div>
+
+      <div class="past-card">
+        <span class="past-age">14歳</span>
+        <p>半年ほど、何人かの女性の家を転々としながら居候していた。<br>
+		整った顔立ちと巧みな話術、そして“可哀想な子ども”という<br>
+		事実を利用して、女性たちを誑かしていた。<br>
+		しかし、“自分だけが助けている”と思い込んでいた女性の一人に<br>
+		腹部を刺され、治療を名目に研究施設へ保護された。<br>
+		  </p>
+      </div>
+
+      <div class="past-card">
+        <span class="past-age">15歳</span>
+        <p>1年間の施術でファクターを与えられる。<br>
+		施設を出てロベリア管轄の<br>
+		特異現象対策課 第0班(育成課)に加入。
+		  </p>
+      </div>
+		
+		<div class="past-card">
+        <span class="past-age">18歳</span>
+        <p>次第にファクターや戦闘技術も安定し、<br>
+		単独で任務を任されるようになる。</p>
+      </div>
+		
+		<div class="past-card">
+        <span class="past-age">20歳</span>
+        <p>ロベリアの判断で緋桐と特異現象対策課 第7班、結成。</p>
+      </div>
+		
+		<div class="past-card">
+        <span class="past-age">25歳</span>
+        <p>現在。</p>
+      </div>
+	
+    </div>
+  </div>
+</div>
+
+<!-- ▼ファクターについて -->
+<div class="ability-trigger">
+  <button id="openAbility-mikage">FACTOR PROFILE</button>
+</div>
+		   
+<div class="ability-modal" id="abilityModal-mikage">
+  <div class="ability-content">
+    <span class="close-btn" id="closeAbility-mikage">&times;</span>		   
+		      
+<div class="ability-box">
+  <h2>FACTOR PROFILE</h2>
+  <div class="ability-data">
+    <p>種類：水</p>
+    <p>特徴：水を操ることができる。<br>
+	厳密には空気中の水分子を集めて形成しており、<br>
+	高湿度環境で力を発揮する。<br>
+	火力には乏しいが、水圧やウォーターカッターのような高威力攻撃から、不意打ちの水撃まで状況次第で幅広く運用できる。</p>
+    <p>備考：基本は銃火器を主装備にしており、水は切り札や機転の一手として使うことが多い。</p>
+  </div>
+</div>
+</div>
+</div>
+		   
+<section class="relationship-section">
+  <h2>RELATIONSHIP</h2>
+
+  <div class="timeline-container">
+    <button class="timeline-btn" data-popup="chapter1-mikage">Phase 1</button>
+    <button class="timeline-btn" data-popup="chapter1-mid-mikage">Phase 1.5</button>
+    <button class="timeline-btn coming-soon" disabled>Phase 2</button>
+  </div>
+
+  <!-- 第一章 -->
+  <div id="chapter1-mikage" class="relationship-popup">
+  <div class="popup-content">
+    <h2>Phase 1</h2>
+
+    <div class="popup-box">
+					
+			 <img src="images/3/3-1.png" alt="higiri" class="popup-icon">
+		 <div class="popup-text">
+      <h3>緋桐、相棒</h3>
+      <p>「ほぼ同期だろ。何考えてんのかわかんねぇけど、コイツはこれでいいんじゃねェか？報連相だけはやってくれるし。」</p>
+		</div>
+    </div>
+
+    <div class="popup-box">
+		 <img src="images/3/3-3.png" alt="shino" class="popup-icon">
+	<div class="popup-text">
+      <h3>紫乃、毒蛇くん</h3>
+      <p>「しっかりした良い後輩だよ。言わなくてもなんでもできるし、なんなら俺がたまに説教されてるし。」</p>
+    </div>
+	  </div>
+
+	  <div class="popup-box">
+		 <img src="images/3/3-4.png" alt="jun" class="popup-icon">
+	<div class="popup-text">
+      <h3>純、ポチ</h3>
+      <p>「元気な後輩だな。コイツ結構失礼なんだけど、面白くて憎めねェんだよ。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-5.png" alt="satsuki" class="popup-icon">
+	<div class="popup-text">
+      <h3>冴月、暴れん坊</h3>
+      <p>「後輩だけど年も一個しか違わねェし、ほぼ同年代だよ。バカなのに話合うんだよなぁ。」</p>
+    </div>
+	  </div>
+		  
+	  <div class="popup-box">
+		 <img src="images/3/3-6.png" alt="toa" class="popup-icon">
+	<div class="popup-text">
+      <h3>橙空、とあ坊</h3>
+      <p>「常識人枠の後輩だな。たま〜にコイツといるとデジャヴ感じるんだよな…ま、気のせいか」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-7.png" alt="hakua" class="popup-icon">
+	<div class="popup-text">
+      <h3>新人チャン</h3>
+      <p>「へぇ、俺らの命の保険ってとこだな。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-8.png" alt="lobe" class="popup-icon">
+	<div class="popup-text">
+      <h3>ロベリア、女王サマ</h3>
+      <p>「直属の上司だ。良い女だと思うぞ、人としてな。」</p>
+    </div>
+	  </div>
+	  
+    <button class="close-btn">&times;</button>
+  </div>
+</div>
+
+
+  <!-- 第一章・中盤 -->
+  <div id="chapter1-mid-mikage" class="relationship-popup">
+    <div class="popup-content">
+      <h2>Phase 1.5</h2>
+            <div class="popup-box">
+					
+			 <img src="images/3/3-1.png" alt="mikage" class="popup-icon">
+		 <div class="popup-text">
+      <h3>緋桐、相棒</h3>
+      <p>「おぉ怖、なんか気にしすぎじゃねェの？」</p>
+		</div>
+    </div>
+
+    <div class="popup-box">
+		 <img src="images/3/3-3.png" alt="shino" class="popup-icon">
+	<div class="popup-text">
+      <h3>紫乃、毒蛇くん</h3>
+      <p>「さすが、うまい位置で探ってやんの。お前らしいけど。」</p>
+    </div>
+	  </div>
+
+	  <div class="popup-box">
+		 <img src="images/3/3-4.png" alt="jun" class="popup-icon">
+	<div class="popup-text">
+      <h3>純、ポチ</h3>
+      <p>「実際、こういう歓迎する姿勢を見せるヤツは、班の調和を保つためにはなってるワケで。お前もうまい立ち回りしてるよな。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-5.png" alt="satsuki" class="popup-icon">
+	<div class="popup-text">
+      <h3>冴月、暴れん坊</h3>
+      <p>「意外とガキの面倒も見れるんだなお前。」</p>
+    </div>
+	  </div>
+		  
+	  <div class="popup-box">
+		 <img src="images/3/3-6.png" alt="toa" class="popup-icon">
+	<div class="popup-text">
+      <h3>橙空、とあ坊</h3>
+      <p>「俺にはわかるぞ、一目惚れだろ？アドバイスとして、こういうのは尽くしすぎてもダメだからな。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-7.png" alt="hakua" class="popup-icon">
+	<div class="popup-text">
+      <h3>白愛、お姫さん</h3>
+      <p>「お前、意外と逞しいな…フィジカルもメンタルも見くびってたぜ。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-8.png" alt="lobe" class="popup-icon">
+	<div class="popup-text">
+      <h3>ロベリア、女王サマ</h3>
+      <p>「お前の判断なら、仕方ねェ。子守りでも護衛でもやってやるよ。」</p>
+    </div>
+	  </div>
+
+      <button class="close-btn">&times;</button>
+
+    </div>
+  </div>
+
+
+</section>
+		   	   
+  </div>
+		</div>	
+		
+		
+		<!-- 紫乃 -->		
+  <div class="character-slide" id="shino">
+	   <div class="slide-content">
+	    <div class="title-box">
+			<h1>蛇目 紫乃</h1>
+			<h2>JANOME SHINO</h2>
+	  </div>
+	    <div class="content">
+			<img src="images/2/2-3.png" alt="shino" class="main-image">	
+			<div class="text-box">
+		  <h3>
+			年   齢：22歳<br>
+			誕生日：７/１４<br>
+			身   長：178cm<br>
+			所   属：オーゼルグ機構<br>
+			<span>　　　　特異現象対策課 第７班</span>　　　	  
+			<br>
+			ファクター：毒<br>
+			武器：ご先祖様に勝手に借りた刀<br>
+			好きなこと：CD集め、携帯型ゲーム<br>
+			好きな食べ物：和食全般<br>
+			苦手なもの：甘いもの、子供<br>
+			嫌いなもの：話が通じないヤツ<br>
+			人　　称：俺 / アンタ<br>
+			家族構成：両親(他界)
+		  </h3>
+		  </div>
+		   </div>
+	   <div class="profile-box">
+    <p>特異現象対策課 第７班所属。冷静で大人びた論理派。<br>
+	第７班の参謀役。警戒心が強く、他人を信用しない。<br>
+	静かな所作と柔軟な身のこなしは戦闘でも生かされる。<br>
+	システム対応に強く、通信やデータ管理もこなす。<br>
+	祖母の影響で趣味が渋いが、年相応な一面も見せる。</p>
+	  </div>
+		   
+	<div class="quote-box">
+    <p>「なに、文句あんの？」<br>
+		「はいはい、仰せのままに。」<br>
+		「まともに動けないでしょ、もう逃げらんないね。」
+	</p>
+	</div>
+		   
+		 <!-- ▼過去をみるボタン -->
+<div class="past-trigger">
+  <button id="openPast-shino">BACKGROUND</button>
+</div>
+
+<!-- ▼ポップアップ内容 -->
+<div id="pastModal-shino" class="past-modal">
+  <div class="past-content">
+    <span id="closePast-shino" class="close-btn">&times;</span>
+
+
+    <div class="past-timeline">
+      <div class="past-card">
+        <span class="past-age">出生</span>
+        <p>ごく一般的な家庭に生まれる。<br>
+			父方は歴史ある家系だが、現在は特に伝統やしきたりもなく、<br>
+			普通の家庭として暮らしていた。</p>
+      </div>
+
+      <div class="past-card">
+        <span class="past-age">3歳</span>
+        <p>
+		交通事故で両親を亡くし、父方の祖母に育ててもらう。<br>
+		</p>
+      </div>
+
+      <div class="past-card">
+        <span class="past-age">10歳</span>
+        <p>
+		幼少期から大人びており、周囲と馴染めなかった紫乃は、<br>
+		同級生からの嫌がらせを受けていた。<br>
+		致死量の毒を投与されても生き延びたことから、<br>
+		“化け物”と呼ばれるようになる。<br>
+		</p>
+      </div>
+		
+		<div class="past-card">
+        <span class="past-age">14歳</span>
+        <p>嫌がらせも収まり、静かな日々を過ごしていたが、<br>
+			唯一の家族だった祖母が亡くなる。<br>
+			身寄りを失い、研究施設へ保護された。<br>
+		</p>
+      </div>
+
+      <div class="past-card">
+        <span class="past-age">15歳</span>
+        <p>1年間の施術でファクターを与えられる。<br>
+		施設を出てオーゼルグ機構とは敵対する派閥に加入。
+		</p>
+      </div>
+		
+		<div class="past-card">
+        <span class="past-age">18歳</span>
+        <p>紫を引き抜くために仕組まれた全面戦争で、<br>
+			所属していた派閥は緋桐・海影によって壊滅した。<br>
+			後日、オーゼルグ機構・特異現象対策課第7班に加入する。</p>
+      </div>
+		
+		<div class="past-card">
+        <span class="past-age">22歳</span>
+        <p>現在。</p>
+      </div>
+	
+    </div>
+  </div>
+</div>
+
+<!-- ▼ファクターについて -->
+<div class="ability-trigger">
+  <button id="openAbility-shino">FACTOR PROFILE</button>
+</div>
+		   
+<div class="ability-modal" id="abilityModal-shino">
+  <div class="ability-content">
+    <span class="close-btn" id="closeAbility-shino">&times;</span>	
+		   
+<div class="ability-box">
+  <h2>FACTOR PROFILE</h2>
+  <div class="ability-data">
+    <p>種類：毒</p>
+    <p>特徴：毒を操ることができる。<br>
+	解毒・消毒はもちろん、毒で相手を蝕むことも自在。<br>
+	手のひらから毒を分泌し、器用さにより毒の濃度を調整できる。<br>
+	蛇毒に似た成分を含み、血液の流れを乱し、組織を内側から崩す。<br>
+	低濃度で麻痺や吐き気を、高濃度で生理機能を著しく損なう。<br>
+	</p>
+    <p>備考：自身の血液由来の毒は特に強力で、直接作用させると効果は確実。</p>
+  </div>
+</div>
+</div>
+</div>
+		   
+<section class="relationship-section">
+  <h2>RELATIONSHIP</h2>
+
+  <div class="timeline-container">
+    <button class="timeline-btn" data-popup="chapter1-shino">Phase 1</button>
+    <button class="timeline-btn" data-popup="chapter1-mid-shino">Phase 1.5</button>
+    <button class="timeline-btn coming-soon" disabled>Phase 2</button>
+  </div>
+
+  <!-- 第一章 -->
+  <div id="chapter1-shino" class="relationship-popup">
+  <div class="popup-content">
+    <h2>Phase 1</h2>
+
+    <div class="popup-box">
+					
+			 <img src="images/3/3-1.png" alt="higiri" class="popup-icon">
+		 <div class="popup-text">
+      <h3>緋桐さん</h3>
+      <p>「班長。頼れるんだけど気難しいっていうか、何考えてるかわかんないっていうか…だいぶ慣れたけど。」</p>
+		</div>
+    </div>
+
+    <div class="popup-box">
+		 <img src="images/3/3-2.png" alt="shino" class="popup-icon">
+	<div class="popup-text">
+      <h3>海影さん</h3>
+      <p>「副班長。いざって時はかっこいいんだけど、それ以外が終わってんだよな…」</p>
+    </div>
+	  </div>
+
+	  <div class="popup-box">
+		 <img src="images/3/3-4.png" alt="jun" class="popup-icon">
+	<div class="popup-text">
+      <h3>純</h3>
+      <p>「友達、って言っていいのかな。突拍子もないことばっかするけど、いいヤツだよ。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-5.png" alt="satsuki" class="popup-icon">
+	<div class="popup-text">
+      <h3>冴月、バカ</h3>
+      <p>「本当に年上？考えなしに突っ走るし、こっちがフォローしようとしたら巻き込まれるし、コイツ嫌いなんだよね…」</p>
+    </div>
+	  </div>
+		  
+	  <div class="popup-box">
+		 <img src="images/3/3-6.png" alt="toa" class="popup-icon">
+	<div class="popup-text">
+      <h3>橙空</h3>
+      <p>「可愛い後輩だよ。ちゃんと建設的な会話もできるし、波長が合うのかな、結構話しやすいよ。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-7.png" alt="hakua" class="popup-icon">
+	<div class="popup-text">
+      <h3>新人</h3>
+      <p>「悪いけどさ、はっきり言って怪しいんだよね。こっちも様子を見させてもらうよ。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-8.png" alt="lobe" class="popup-icon">
+	<div class="popup-text">
+      <h3>ロベリアさん</h3>
+      <p>「俺らのボス。最初はやっぱ警戒してたんだけど、関わるうちにいい人だってわかって今は信頼してる。」</p>
+    </div>
+	  </div>
+	  
+    <button class="close-btn">&times;</button>
+  </div>
+</div>
+
+
+  <!-- 第一章・中盤 -->
+  <div id="chapter1-mid-shino" class="relationship-popup">
+    <div class="popup-content">
+      <h2>Phase 1.5</h2>
+            <div class="popup-box">
+					
+			 <img src="images/3/3-1.png" alt="mikage" class="popup-icon">
+		 <div class="popup-text">
+      <h3>緋桐さん</h3>
+      <p>「…俺より警戒してるな。」</p>
+		</div>
+    </div>
+
+    <div class="popup-box">
+		 <img src="images/3/3-2.png" alt="shino" class="popup-icon">
+	<div class="popup-text">
+      <h3>海影さん</h3>
+      <p>「相変わらず、って感じだけどこの人のことだし、それなりに考えてはあるんでしょ。」</p>
+    </div>
+	  </div>
+
+	  <div class="popup-box">
+		 <img src="images/3/3-4.png" alt="jun" class="popup-icon">
+	<div class="popup-text">
+      <h3>純</h3>
+      <p>「もう適応してるし…ま、それがお前の良いとこでもあるよね。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-5.png" alt="satsuki" class="popup-icon">
+	<div class="popup-text">
+      <h3>冴月、バカ</h3>
+      <p>「別にアンタはどうでもいいや、勝手にして。あと今日のチキングリル味濃すぎ、舌までバカなの？」</p>
+    </div>
+	  </div>
+		  
+	  <div class="popup-box">
+		 <img src="images/3/3-6.png" alt="toa" class="popup-icon">
+	<div class="popup-text">
+      <h3>橙空、ヘタレ</h3>
+      <p>「やけに肩持つよねぇ…そういうこと？」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-7.png" alt="hakua" class="popup-icon">
+	<div class="popup-text">
+      <h3>白愛、お転婆娘</h3>
+      <p>「意外と退屈しない、その考えでどこまで通用するか見ものだね。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-8.png" alt="lobe" class="popup-icon">
+	<div class="popup-text">
+      <h3>ロベリアさん</h3>
+      <p>「なるべく殺さない方向はアンタらしいよね。」</p>
+    </div>
+	  </div>
+
+      <button class="close-btn">&times;</button>
+
+    </div>
+  </div>
+
+
+</section>
+		   	   
+  </div>
+		</div>	
+				
+		<!-- 純 -->		
+  <div class="character-slide" id="jun">
+	   <div class="slide-content">
+	    <div class="title-box">
+			<h1>雷明 純</h1>
+			<h2>RAIMEI JUN</h2>
+	  </div>
+	    <div class="content">
+			<img src="images/2/2-4.png" alt="jun" class="main-image">	
+			<div class="text-box">
+		  <h3>
+			年   齢：22歳<br>
+			誕生日：８/１７<br>
+			身   長：185cm<br>
+			所   属：オーゼルグ機構<br>
+			<span>　　　　特異現象対策課 第７班</span>　　　	  
+			<br>
+			ファクター：電気<br>
+			武器：なし<br>
+			好きなこと：食べること、動くこと<br>
+			好きな食べ物：肉<br>
+			苦手なもの：武器を扱う戦闘<br>
+			嫌いなもの：堅苦しい空気<br>
+			人　　称：俺 / アンタ<br>
+			家族構成：父、母
+		  </h3>
+		  </div>
+		   </div>
+	   <div class="profile-box">
+    <p>特異現象対策課 第７班所属。よく食べる元気な好青年。<br>
+	第７班の中では、特に運動神経抜群で身体能力も高い。<br>
+	愛嬌のある性格で、見た目以上に聡明。<br>
+	食人に適応し、自身の異常性にも自覚がある。<br>
+	世界的財閥の元御曹司で、名を変え素性を隠している。</p>
+	  </div>
+		   
+	<div class="quote-box">
+    <p>「お肉も空気も、柔らかい方がいいじゃないっすか」<br>
+		「パパッと終わらせるっすよ！」<br>
+		「じゃ、こっからは見境なくやらせてもらうっす！」
+	</p>
+	</div>
+		   
+		 <!-- ▼過去をみるボタン -->
+<div class="past-trigger">
+  <button id="openPast-jun">BACKGROUND</button>
+</div>
+
+<!-- ▼ポップアップ内容 -->
+<div id="pastModal-jun" class="past-modal">
+  <div class="past-content">
+    <span id="closePast-jun" class="close-btn">&times;</span>
+
+
+    <div class="past-timeline">
+      <div class="past-card">
+        <span class="past-age">出生</span>
+        <p>世界的に名の知れた財閥・天雷家に生まれる。<br>
+		両親は後継としてしか扱わず、愛情はなかった。<br>
+		専門家による厳しい教育のもとで育つ。
+		</p>
+      </div>
+
+      <div class="past-card">
+        <span class="past-age">12歳</span>
+        <p>
+		立入禁止の私有地の施設に足を踏み入れ、<br>
+		電気ショックを用いた非人道的な人体実験の現場を目撃する。<br>
+		気づかれる前にその場を離れたため、発覚は免れた。
+		</p>
+      </div>
+
+      <div class="past-card">
+        <span class="past-age">13歳</span>
+        <p>
+		人体実験を目撃して以来、後継として生きることに限界を感じる。<br>
+		夜明け前、塀の抜け穴を伝ってあっさりと脱走。<br>
+		なるべく遠くへ走り、力尽きたところを研究施設に保護された。
+		</p>
+      </div>
+		
+		<div class="past-card">
+        <span class="past-age">14歳</span>
+        <p>1年間の施術でファクターを与えられる。<br>
+		施設を出てロベリア管轄の<br>
+		特異現象対策課 第0班(育成課)に加入。<br>
+		ファクターが影響して人肉を食す体質になってしまう。<br>
+		</p>
+      </div>
+
+		<div class="past-card">
+        <span class="past-age">19歳</span>
+        <p>ロベリアの判断で特異現象対策課 第7班に加入。</p>
+      </div>
+		
+		<div class="past-card">
+        <span class="past-age">22歳</span>
+        <p>現在。</p>
+      </div>
+	
+    </div>
+  </div>
+</div>
+
+<!-- ▼ファクターについて -->
+<div class="ability-trigger">
+  <button id="openAbility-jun">FACTOR PROFILE</button>
+</div>
+		   
+<div class="ability-modal" id="abilityModal-jun">
+  <div class="ability-content">
+    <span class="close-btn" id="closeAbility-jun">&times;</span>	
+		 
+<div class="ability-box">
+  <h2>FACTOR PROFILE</h2>
+  <div class="ability-data">
+    <p>種類：電気</p>
+    <p>特徴：電気全般を操ることができる。<br>
+	拳を握って帯電、指先から放電する。<br>
+	両手五指は各々特性を持つ（親指＝高出力、人差し指＝照準制御、<br>
+	中指＝遠距離、薬指＝高速、小指＝低出力）。<br>
+	精密な操作から強力な一撃まで幅広く対応可能。<br>
+	</p>
+    <p>備考：テンションが上がると体表から漏電を起こす。<br>
+	また、人間の生体電流を取り込むことで出力が上昇するため、<br>
+	食人に適応した体質となっている。</p>
+  </div>
+</div>
+	</div>
+		   </div>
+	
+		   
+<section class="relationship-section">
+  <h2>RELATIONSHIP</h2>
+
+  <div class="timeline-container">
+    <button class="timeline-btn" data-popup="chapter1-jun">Phase 1</button>
+    <button class="timeline-btn" data-popup="chapter1-mid-jun">Phase 1.5</button>
+    <button class="timeline-btn coming-soon" disabled>Phase 2</button>
+  </div>
+
+  <!-- 第一章 -->
+  <div id="chapter1-jun" class="relationship-popup">
+  <div class="popup-content">
+    <h2>Phase 1</h2>
+
+    <div class="popup-box">
+					
+			 <img src="images/3/3-1.png" alt="higiri" class="popup-icon">
+		 <div class="popup-text">
+      <h3>緋桐さん</h3>
+      <p>「うちの班長っすよ！怒らせなくてもやばいんであんまり刺激しない方がいいっす。」</p>
+		</div>
+    </div>
+
+    <div class="popup-box">
+		 <img src="images/3/3-2.png" alt="mikage" class="popup-icon">
+	<div class="popup-text">
+      <h3>海影さん</h3>
+      <p>「副班長っす！残念なイケメンってこういうことを言うんすかね、いいとこもあるんすけどね。」</p>
+    </div>
+	  </div>
+
+	  <div class="popup-box">
+		 <img src="images/3/3-3.png" alt="shino" class="popup-icon">
+	<div class="popup-text">
+      <h3>紫乃さん、紫乃くん</h3>
+      <p>「俺は友人だと思ってるっす。たまに子供っぽいところもあって面白いんすよ！」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-5.png" alt="satsuki" class="popup-icon">
+	<div class="popup-text">
+      <h3>冴月さん</h3>
+      <p>「一見やばい人っすけど、話すとそうでもないっすよ！俺から見たら比較的安全な方っす！」</p>
+    </div>
+	  </div>
+		  
+	  <div class="popup-box">
+		 <img src="images/3/3-6.png" alt="toa" class="popup-icon">
+	<div class="popup-text">
+      <h3>橙空くん</h3>
+      <p>「頑張り屋さんの後輩っす！素直でいい子っすよ！上の扱いにも慣れてきてるっぽいっす。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-7.png" alt="hakua" class="popup-icon">
+	<div class="popup-text">
+      <h3>新人ちゃん</h3>
+      <p>「事情が事情っすけど、賑やかになるのは歓迎っすよ！」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-8.png" alt="lobe" class="popup-icon">
+	<div class="popup-text">
+      <h3>姉御</h3>
+      <p>「姉御はほんとにいい上司っすよ〜！ワーカーホリック気味なのが心配っすけどね。」</p>
+    </div>
+	  </div>
+	  
+    <button class="close-btn">&times;</button>
+  </div>
+</div>
+
+
+  <!-- 第一章・中盤 -->
+  <div id="chapter1-mid-jun" class="relationship-popup">
+    <div class="popup-content">
+      <h2>Phase 1.5</h2>
+            <div class="popup-box">
+					
+			 <img src="images/3/3-1.png" alt="mikage" class="popup-icon">
+		 <div class="popup-text">
+      <h3>緋桐さん</h3>
+      <p>「最近はより一層ピリピリして怖いんすよ〜！」</p>
+		</div>
+    </div>
+
+    <div class="popup-box">
+		 <img src="images/3/3-2.png" alt="mikage" class="popup-icon">
+	<div class="popup-text">
+      <h3>海影さん</h3>
+      <p>「前よりしっかりしてる気がするんすよ、相変わらず性格はカスなんすけどね。」</p>
+    </div>
+	  </div>
+
+	  <div class="popup-box">
+		 <img src="images/3/3-3.png" alt="shino" class="popup-icon">
+	<div class="popup-text">
+      <h3>紫乃さん、紫乃くん</h3>
+      <p>「その、完全に情を切り捨てられないところが、俺はいいところだと思うっす。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-5.png" alt="satsuki" class="popup-icon">
+	<div class="popup-text">
+      <h3>冴月さん</h3>
+      <p>「この人ってちゃんと人間だったんすね…あ、あと今日のチキングリル美味しかったっす！」</p>
+    </div>
+	  </div>
+		  
+	  <div class="popup-box">
+		 <img src="images/3/3-6.png" alt="toa" class="popup-icon">
+	<div class="popup-text">
+      <h3>橙空くん</h3>
+      <p>「…そういうこと？そういうことなんすか！？」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-7.png" alt="hakua" class="popup-icon">
+	<div class="popup-text">
+      <h3>はくちゃん</h3>
+      <p>「なんやかんや強い子っすよ！たまに寂しそうだから、早く帰れるといいんすけどね。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-8.png" alt="lobe" class="popup-icon">
+	<div class="popup-text">
+      <h3>姉御</h3>
+      <p>「俺も子供を殺すのは避けたいし、同意見っすよ。」</p>
+    </div>
+	  </div>
+
+      <button class="close-btn">&times;</button>
+
+    </div>
+  </div>
+
+
+</section>
+		   	   
+  </div>
+		</div>	
+			
+		
+		<!-- 冴月 -->	
+  <div class="character-slide" id="satsuki">
+	   <div class="slide-content">
+	    <div class="title-box">
+			<h1>風嵐 冴月</h1>
+			<h2>KAZARASHI SATSUKI</h2>
+	  </div>
+	    <div class="content">
+			<img src="images/2/2-5.png" alt="satsuki" class="main-image">	
+			<div class="text-box">
+		  <h3>
+			年   齢：24歳<br>
+			誕生日：５/１９<br>
+			身   長：182cm<br>
+			所   属：オーゼルグ機構<br>
+			<span>　　　　特異現象対策課 第７班</span>　　　	  
+			<br>
+			ファクター：気流<br>
+			武器：ナイフ、投擲も可<br>
+			好きなこと：戦闘、料理<br>
+			好きな食べ物：丼物<br>
+			苦手なもの：敬語、行儀よくすること<br>
+			嫌いなもの：可愛らしい物<br>
+			人　　称：俺 / てめェ<br>
+			家族構成：父、母
+		  </h3>
+		  </div>
+		   </div>
+	   <div class="profile-box">
+    <p>特異現象対策課 第７班所属。戦闘狂のかませ犬。<br>
+	第７班の最前衛、単独でも強く、近距離戦では敵なし。<br>
+	喧嘩っ早く短気だが単純で、慣れれば扱いやすい。<br>
+	左目は右目と同色の義眼。意外にも料理が上手い。<br>
+	ときどきまともな発言をして周囲を驚かせる。</p>
+	  </div>
+		   
+	<div class="quote-box">
+    <p>「作戦なんかいらねェよ、俺が全部ブッ潰してやらァ。」<br>
+		「ピンチの方が興奮すんだろ。」<br>
+		「やっとおもしろくなってきやがった。」
+	</p>
+	</div>
+		   
+		 <!-- ▼過去をみるボタン -->
+<div class="past-trigger">
+  <button id="openPast-satsuki">BACKGROUND</button>
+</div>
+
+<!-- ▼ポップアップ内容 -->
+<div id="pastModal-satsuki" class="past-modal">
+  <div class="past-content">
+    <span id="closePast-satsuki" class="close-btn">&times;</span>
+
+
+    <div class="past-timeline">
+      <div class="past-card">
+        <span class="past-age">出生</span>
+        <p>幼少期は可愛らしい容姿ゆえに、<br>
+		過保護な母から着せ替え人形のように扱われていた。
+		</p>
+      </div>
+
+      <div class="past-card">
+        <span class="past-age">10歳</span>
+        <p>
+		母による過干渉、過度な理想の押し付けに<br>
+		抵抗した結果、気性の荒い性格が形成された。
+		</p>
+      </div>
+
+      <div class="past-card">
+        <span class="past-age">11歳</span>
+        <p>
+		学校には在籍していたが、ほとんど通わずに<br>
+		上級生との喧嘩や暴力沙汰を繰り返す日々を送る。<br>
+		母は思い通りに育たない冴月に精神を病み、<br>
+		父は次第に家を避けるようになった。
+		</p>
+      </div>
+		
+		<div class="past-card">
+        <span class="past-age">13歳</span>
+        <p>
+		数人を相手に喧嘩し勝利するも、左目を潰される。<br>
+		母に連れられ訪れたクリニックが研究施設の関連機関で、<br>
+		治療を口実に保護された。
+		</p>
+      </div>
+		
+		<div class="past-card">
+        <span class="past-age">14歳</span>
+        <p>1年間の施術でファクターを与えられる。<br>
+		施設を出てロベリア管轄の<br>
+		特異現象対策課 第0班(育成課)に加入。<br>
+		</p>
+      </div>
+
+		<div class="past-card">
+        <span class="past-age">17歳</span>
+        <p>次第にファクターや戦闘技術も安定し、<br>
+		単独で任務を任されるようになる。</p>
+      </div>
+		
+		<div class="past-card">
+        <span class="past-age">22歳</span>
+        <p>ロベリアの判断で特異現象対策課 第7班に加入。</p>
+      </div>
+		
+		<div class="past-card">
+        <span class="past-age">24歳</span>
+        <p>現在。</p>
+      </div>
+	
+    </div>
+  </div>
+</div>
+
+<!-- ▼ファクターについて -->
+	<div class="ability-trigger">
+  <button id="openAbility-satsuki">FACTOR PROFILE</button>
+</div>
+		   
+<div class="ability-modal" id="abilityModal-satsuki">
+  <div class="ability-content">
+    <span class="close-btn" id="closeAbility-satsuki">&times;</span>	
+		   
+<div class="ability-box">
+  <h2>FACTOR PROFILE</h2>
+  <div class="ability-data">
+    <p>種類：気流</p>
+    <p>特徴：空気の流れを操ることができる。<br>
+	空気の乱れを通して周囲の動きを感知し、<br>
+	背後や死角からの敵や飛来物に即座に反応可能。<br>
+	攻撃力は低く、戦闘では気流操作そのものよりも、<br>
+	感覚を頼りにした反射的な立ち回りをする。
+	</p>
+    <p>備考：気流を操れることを忘れていることが多く、促されて使う程度で精度は低い。</p>
+  </div>
+</div>
+	</div>
+		   </div>
+		   
+<section class="relationship-section">
+  <h2>RELATIONSHIP</h2>
+
+  <div class="timeline-container">
+    <button class="timeline-btn" data-popup="chapter1-satsuki">Phase 1</button>
+    <button class="timeline-btn" data-popup="chapter1-mid-satsuki">Phase 1.5</button>
+    <button class="timeline-btn coming-soon" disabled>Phase 2</button>
+  </div>
+
+  <!-- 第一章 -->
+  <div id="chapter1-satsuki" class="relationship-popup">
+  <div class="popup-content">
+    <h2>Phase 1</h2>
+
+    <div class="popup-box">
+					
+			 <img src="images/3/3-1.png" alt="higiri" class="popup-icon">
+		 <div class="popup-text">
+      <h3>緋桐、イカれ野郎</h3>
+      <p>「おっかねェヤツだな、敵にしたくねェけど偉そうでムカつくンだよ。」</p>
+		</div>
+    </div>
+
+    <div class="popup-box">
+		 <img src="images/3/3-2.png" alt="mikage" class="popup-icon">
+	<div class="popup-text">
+      <h3>海影、ゲス野郎</h3>
+      <p>「やべェヤツだけどおもしれェよ、冗談抜きでやべェヤツだけどな。」</p>
+    </div>
+	  </div>
+
+	  <div class="popup-box">
+		 <img src="images/3/3-3.png" alt="shino" class="popup-icon">
+	<div class="popup-text">
+      <h3>紫乃、蛇野郎</h3>
+      <p>「うるせェンだよてめェは！いちいち指図してんじゃねェ！」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-4.png" alt="jun" class="popup-icon">
+	<div class="popup-text">
+      <h3>純、ポチ</h3>
+      <p>「人食ってんのはどうかと思うけど、飯残さねェし、いいヤツなんじゃねェか？」</p>
+    </div>
+	  </div>
+		  
+	  <div class="popup-box">
+		 <img src="images/3/3-6.png" alt="toa" class="popup-icon">
+	<div class="popup-text">
+      <h3>橙空、ヘタレ野郎</h3>
+      <p>「俺の後に加入してきたからはっきり後輩。同行任務が多いからわかるけど、意外とやるヤツだよ。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-7.png" alt="hakua" class="popup-icon">
+	<div class="popup-text">
+      <h3>新入り</h3>
+      <p>「よくわかんねェけど俺の邪魔しねェならどうでもいいワ。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-8.png" alt="lobe" class="popup-icon">
+	<div class="popup-text">
+      <h3>ロベリア、女王サマ</h3>
+      <p>「この俺が女相手にあのザマとは、認めたくねェけど逆らえねェ。」</p>
+    </div>
+	  </div>
+	  
+    <button class="close-btn">&times;</button>
+  </div>
+</div>
+
+
+  <!-- 第一章・中盤 -->
+  <div id="chapter1-mid-satsuki" class="relationship-popup">
+    <div class="popup-content">
+      <h2>Phase 1.5</h2>
+            <div class="popup-box">
+					
+			 <img src="images/3/3-1.png" alt="mikage" class="popup-icon">
+		 <div class="popup-text">
+      <h3>緋桐、イカれ野郎</h3>
+      <p>「何キレてんだよ。」</p>
+		</div>
+    </div>
+
+    <div class="popup-box">
+		 <img src="images/3/3-2.png" alt="mikage" class="popup-icon">
+	<div class="popup-text">
+      <h3>海影、ゲス野郎</h3>
+      <p>「女なら誰でもいいわけじゃねェのな、ガキは相手にしない派みたいで安心したワ。」</p>
+    </div>
+	  </div>
+
+	  <div class="popup-box">
+		 <img src="images/3/3-3.png" alt="shino" class="popup-icon">
+	<div class="popup-text">
+      <h3>紫乃、蛇野郎</h3>
+      <p>「うぜェ〜、ほんとコイツ嫌いなんだワ。てめェの煮物は味が薄いンだよ！」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-4.png" alt="satsuki" class="popup-icon">
+	<div class="popup-text">
+      <h3>純、ポチ</h3>
+      <p>「お前って結局、バカなのか大物なのかわかんねェな。いいヤツはいいヤツだけど。」</p>
+    </div>
+	  </div>
+		  
+	  <div class="popup-box">
+		 <img src="images/3/3-6.png" alt="toa" class="popup-icon">
+	<div class="popup-text">
+      <h3>橙空、ヘタレ野郎</h3>
+      <p>「たまに目がマジで怖ェンだよ。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-7.png" alt="hakua" class="popup-icon">
+	<div class="popup-text">
+      <h3>白愛、チビ</h3>
+      <p>「調子は狂わされっけど、心地は悪くねェよ。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-8.png" alt="lobe" class="popup-icon">
+	<div class="popup-text">
+      <h3>ロベリア、女王サマ</h3>
+      <p>「ハイハイ、言うこと聞きゃいいんだろ。お前を敵にしてまで殺したいモンじゃねェって。」</p>
+    </div>
+	  </div>
+
+      <button class="close-btn">&times;</button>
+
+    </div>
+  </div>
+
+
+</section>
+		   	   
+  </div>
+		</div>	
+			
+		
+		<!-- 橙空 -->		
+  <div class="character-slide" id="toa">
+	   <div class="slide-content">
+	    <div class="title-box">
+			<h1>十六原 橙空</h1>
+			<h2>IZAHARA TOA</h2>
+	  </div>
+	    <div class="content">
+			<img src="images/2/2-6.png" alt="toa" class="main-image">	
+			<div class="text-box">
+		  <h3>
+			年   齢：19歳<br>
+			誕生日：１０/７<br>
+			身   長：174cm<br>
+			所   属：オーゼルグ機構<br>
+			<span>　　　　特異現象対策課 第７班</span>　　　	  
+			<br>
+			ファクター：念力、？？？<br>
+			武器：爆弾全般<br>
+			好きなこと：カフェ巡り<br>
+			好きな食べ物：果物、特にオレンジ<br>
+			苦手なもの：クリーチャー系<br>
+			嫌いなもの：奪われること<br>
+			人　　称：僕 / 君<br>
+			家族構成：両親（他界）、姉
+		  </h3>
+		  </div>
+		   </div>
+	   <div class="profile-box">
+    <p>特異現象対策課 第７班所属。どちらかといえば癒し系。<br>
+	第７班では、最年少ながら信頼を置かれている。<br>
+	やや腕力に劣るため、手軽な爆発物で中距離から撹乱。<br>
+	特殊な事情を抱える白愛に、唯一積極的に歩み寄る。<br>
+	橙色の髪留めをとても大切にしている。
+	</p>
+	  </div>
+		   
+	<div class="quote-box">
+    <p>「こんなんじゃダメだね、次に行こうか。」<br>
+		「前から知ってた…って冗談だよ。」<br>
+		「大丈夫だよ、すぐ迎えに行くから。」
+	</p>
+	</div>
+		   
+		 <!-- ▼過去をみるボタン -->
+<div class="past-trigger">
+  <button id="openPast-toa">BACKGROUND</button>
+</div>
+
+<!-- ▼ポップアップ内容 -->
+<div id="pastModal-toa" class="past-modal">
+  <div class="past-content">
+    <span id="closePast-toa" class="close-btn">&times;</span>
+
+
+    <div class="past-timeline">
+      <div class="past-card">
+        <span class="past-age">出生</span>
+        <p>
+			平凡な家庭で両親と姉に囲まれ育つ。
+		</p>
+      </div>
+
+      <div class="past-card">
+        <span class="past-age">12歳</span>
+        <p>
+		自宅が過激派閥の襲撃を受け、両親が死亡。<br>
+		姉に庇われ逃げるが、安否の事実を恐れて帰れなかった。<br>
+		遠くへ彷徨い力尽きたところを研究施設に保護された。<br>
+		</p>
+      </div>
+		
+		<div class="past-card">
+        <span class="past-age">13歳</span>
+        <p>1年間の施術でファクターを与えられる。<br>
+		施設を出てロベリア管轄の<br>
+		特異現象対策課 第0班(育成課)に加入。<br>
+		当初は家族の死に苦しむも、次第に慣れていった。<br>
+		</p>
+      </div>
+		
+		<div class="past-card">
+        <span class="past-age">17歳</span>
+        <p>ロベリアの判断で特異現象対策課 第7班に加入。</p>
+      </div>
+		
+		<div class="past-card">
+        <span class="past-age">19歳</span>
+        <p>現在。</p>
+      </div>
+	
+    </div>
+  </div>
+</div>
+
+<!-- ▼ファクターについて -->
+		   	<div class="ability-trigger">
+  <button id="openAbility-toa">FACTOR PROFILE</button>
+</div>
+		   
+<div class="ability-modal" id="abilityModal-toa">
+  <div class="ability-content">
+    <span class="close-btn" id="closeAbility-toa">&times;</span>
+	  
+<div class="ability-box">
+  <h2>FACTOR PROFILE</h2>
+  <div class="ability-data">
+    <p>種類：念力</p>
+    <p>特徴：対人では目を合わせる、<br>
+	物体は触れることを条件に操ることができる。<br>
+	人を操って壁に叩きつけることも、<br>
+	触れた物体を飛ばして攻撃することも可能。<br>
+	スピードには限度があるが、自由度は高い。
+	</p>
+    <p>備考：対象が重いほど持続時間と速度が落ちる。体力を鍛えることで操作時間を延ばすことができる。</p>
+	  
+	<p>種類：時間遡行</p>
+	<p>特徴：明確なタイミングを思い浮かべ、<br>
+	「戻りたい」と強く願うことで発動する。<br>
+	ただし戻れるのは過去1年以内に限られ、<br>
+	それ以上の過去へは、戻れない。
+	</p>
+    <p>備考：ファクターは本来ひとり一つだが、ある出来事をきっかけに、〈時間遡行〉が覚醒する。</p>
+  </div>
+</div>
+	</div>
+		   </div>
+		   
+<section class="relationship-section">
+  <h2>RELATIONSHIP</h2>
+
+  <div class="timeline-container">
+    <button class="timeline-btn" data-popup="chapter1-toa">Phase 1</button>
+    <button class="timeline-btn" data-popup="chapter1-mid-toa">Phase 1.5</button>
+    <button class="timeline-btn coming-soon" disabled>Phase 2</button>
+  </div>
+
+  <!-- 第一章 -->
+  <div id="chapter1-toa" class="relationship-popup">
+  <div class="popup-content">
+    <h2>Phase 1</h2>
+
+    <div class="popup-box">
+					
+			 <img src="images/3/3-1.png" alt="higiri" class="popup-icon">
+		 <div class="popup-text">
+      <h3>緋桐さん</h3>
+      <p>「班長だよ。嫌われてはないと思うけどあまり踏み込みたくはないかな。」</p>
+		</div>
+    </div>
+
+    <div class="popup-box">
+		 <img src="images/3/3-2.png" alt="mikage" class="popup-icon">
+	<div class="popup-text">
+      <h3>海影さん</h3>
+      <p>「副班長。社交的でこの人がまとめてくれなきゃ、ここはもう終わってるよ…まぁ本人も終わってるけど。」</p>
+    </div>
+	  </div>
+
+	  <div class="popup-box">
+		 <img src="images/3/3-3.png" alt="shino" class="popup-icon">
+	<div class="popup-text">
+      <h3>紫乃さん</h3>
+      <p>「まともな先輩で頼りやすいよ、冷たそうに見えて優しい人なんだ。たまに揶揄われるけどね。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-4.png" alt="jun" class="popup-icon">
+	<div class="popup-text">
+      <h3>純さん</h3>
+      <p>「言動の割にいい先輩。気さくだし、棘がないし、話しやすいかな。たまに便乗して揶揄ってくるけど。」</p>
+    </div>
+	  </div>
+		  
+	  <div class="popup-box">
+		 <img src="images/3/3-5.png" alt="satsuki" class="popup-icon">
+	<div class="popup-text">
+      <h3>冴月さん</h3>
+      <p>「余程のことがない限りはこっちに被害ないし、頼れるとこもあるよ。イカれてるのは前提。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-7.png" alt="hakua" class="popup-icon">
+	<div class="popup-text">
+      <h3>白愛</h3>
+      <p>「初めまして、よろしくね。消去法で僕が一番接しやすいだろうし、頼っていいからさ。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-8.png" alt="lobe" class="popup-icon">
+	<div class="popup-text">
+      <h3>ロベリアさん</h3>
+      <p>「この人の部下で良かったって思うくらい、いい上司。仕事ぶりで応えなきゃね。」</p>
+    </div>
+	  </div>
+	  
+    <button class="close-btn">&times;</button>
+  </div>
+</div>
+
+
+  <!-- 第一章・中盤 -->
+  <div id="chapter1-mid-toa" class="relationship-popup">
+    <div class="popup-content">
+      <h2>Phase 1.5</h2>
+            <div class="popup-box">
+					
+			 <img src="images/3/3-1.png" alt="mikage" class="popup-icon">
+		 <div class="popup-text">
+      <h3>緋桐さん</h3>
+      <p>「何が地雷かわからないけど、危険人物。双方に刺激しないようにさせなきゃ。」</p>
+		</div>
+    </div>
+
+    <div class="popup-box">
+		 <img src="images/3/3-2.png" alt="mikage" class="popup-icon">
+	<div class="popup-text">
+      <h3>海影さん</h3>
+      <p>「ちょっとどうかしてるだけのかっこいい大人だよ。場合によってはその分、崩壊するので要注意。」</p>
+    </div>
+	  </div>
+
+	  <div class="popup-box">
+		 <img src="images/3/3-3.png" alt="shino" class="popup-icon">
+	<div class="popup-text">
+      <h3>紫乃さん</h3>
+      <p>「性格上は警戒するけど、最終的には味方してくれる。こういうところが優しい人だと思う。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-4.png" alt="satsuki" class="popup-icon">
+	<div class="popup-text">
+      <h3>純さん</h3>
+      <p>「楽観的でいてくれて、だいぶ場を動かしやすいから助かってる。」</p>
+    </div>
+	  </div>
+		  
+	  <div class="popup-box">
+		 <img src="images/3/3-5.png" alt="toa" class="popup-icon">
+	<div class="popup-text">
+      <h3>冴月さん</h3>
+      <p>「最近は扱いに慣れてきたよ。ちょっと粗暴なだけで筋は通すし、嫌いじゃないかな。イカれてるのは前提。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-7.png" alt="hakua" class="popup-icon">
+	<div class="popup-text">
+      <h3>白愛</h3>
+      <p>「今って何週間目だっけ？…もう何回目だっけ……いや、大丈夫だよ。絶対に君を利用させない。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-8.png" alt="lobe" class="popup-icon">
+	<div class="popup-text">
+      <h3>ロベリアさん</h3>
+      <p>「この人の倫理観じゃなければ最初からこうじゃなかった、本当に感謝してる。」</p>
+    </div>
+	  </div>
+
+      <button class="close-btn">&times;</button>
+
+    </div>
+  </div>
+
+
+</section>
+		   	   
+  </div>
+		</div>	
+
+		<!-- 白愛 -->		
+  <div class="character-slide" id="hakua">
+	   <div class="slide-content">
+	    <div class="title-box">
+			<h1>蘇和 白愛</h1>
+			<h2>SOWA HAKUA</h2>
+	  </div>
+	    <div class="content">
+			<img src="images/2/2-7.png" alt="hakua" class="main-image">	
+			<div class="text-box">
+		  <h3>
+			年   齢：18歳<br>
+			誕生日：４/４<br>
+			身   長：160cm<br>
+			所   属：オーゼルグ機構<br>
+			<span>　　　　特異現象対策課 第７班</span>　　　	  
+			<br>
+			ファクター：蘇生、絶命<br>
+			武器：改造ライト<br>
+			好きなこと：雑貨集め<br>
+			好きな食べ物：バニラ味のもの<br>
+			苦手なもの：戦闘<br>
+			嫌いなもの：残酷なこと<br>
+			人　　称：アタシ / あなた<br>
+			家族構成：父、母、小中学生の弟2人
+		  </h3>
+		  </div>
+		   </div>
+	   <div class="profile-box">
+    <p>特異現象対策課 第７班所属。異質な新人兼監視対象。<br>
+	第７班では警戒されながらも、歩み寄ることを貫く。<br>
+	高い身体能力を持ち、特に回避に優れる。<br>
+	異常な世界に戸惑い、元の世界に帰る方法を探す。<br>
+	痛いほど眩しい、真っ直ぐな光を放ち続ける。
+	</p>
+	  </div>
+		   
+	<div class="quote-box">
+    <p>「ひとつでも手がかりを探さなきゃ。」<br>
+		「間に合え！」<br>
+		「何も…殺さなくたって、いいじゃないですか。」
+	</p>
+	</div>
+		   
+		 <!-- ▼過去をみるボタン -->
+<div class="past-trigger">
+  <button id="openPast-hakua">BACKGROUND</button>
+</div>
+
+<!-- ▼ポップアップ内容 -->
+<div id="pastModal-hakua" class="past-modal">
+  <div class="past-content">
+    <span id="closePast-hakua" class="close-btn">&times;</span>
+
+
+    <div class="past-timeline">
+      <div class="past-card">
+        <span class="past-age">出生</span>
+        <p>
+			少し良い家の生まれで、<br>
+			両親と弟ふたり、穏やかな日々を送っていた。<br>
+			友達や家族を大切にし、憧れの先輩に恋する。<br>
+			どこにでもいる、ごく普通の女の子。
+		</p>
+      </div>
+
+      <div class="past-card">
+        <span class="past-age">17歳</span>
+        <p>
+		高校の修学旅行中、展望台から転落。<br>
+		地面に衝突する直前、別宇宙へ転送される。<br>
+		その際、施術を受けずにコードファクターが身体と融合した。
+		</p>
+      </div>
+		
+		<div class="past-card">
+        <span class="past-age">18歳</span>
+        <p>現在。<br>
+		転送前の世界は冬、転送後の世界は初夏。<br>
+		誕生日を過ぎており、ひとつ年齢が上がっている。。<br>
+		強力すぎるファクターを監視する名目で、<br>
+		特異現象対策課 第7班に加入。<br>
+		敵対の意思が見られた場合は処分される条件付き。<br>
+		元の世界へ帰るため、行動を続けている。
+		</p>
+      </div>
+	
+    </div>
+  </div>
+</div>
+
+<!-- ▼ファクターについて -->
+	<div class="ability-trigger">
+  <button id="openAbility-hakua">FACTOR PROFILE</button>
+</div>
+		   
+<div class="ability-modal" id="abilityModal-hakua">
+  <div class="ability-content">
+    <span class="close-btn" id="closeAbility-hakua">&times;</span>
+	  
+<div class="ability-box">
+  <h2>FACTOR PROFILE</h2>
+  <div class="ability-data">
+    <p>種類：蘇生</p>
+    <p>特徴：死体の70%以上が残存し、<br>
+	死後24時間以内」でに限り発動可能。<br>
+	細胞レベルでの再生により、重傷や欠損の修復も可能。<br>
+	掌を通じて蘇生・回復対象に触れると、細胞を再生させる。
+	</p>
+    <p>備考：希少なファクターで、発動時の集中力が高いほど回復速度が上昇し、早期に蘇生を行うほど成功率も高まる。</p>
+	  
+	<p>種類：絶命</p>
+	<p>特徴：強い憎悪を条件に、<br>
+	憎しみを抱いた相手の心臓を瞬時に停止させる。<br>
+	</p>
+    <p>備考：希少なファクターで、ロベリアの指示がない限り使用を禁じられており、命令を破って発動した場合はメンバーによって処分される。<br>
+	本人もまた、進んで使用しようとはしない。
+  </div>
+</div>
+	</div>
+		   </div>
+		   
+<section class="relationship-section">
+  <h2>RELATIONSHIP</h2>
+
+  <div class="timeline-container">
+    <button class="timeline-btn" data-popup="chapter1-hakua">Phase 1</button>
+    <button class="timeline-btn" data-popup="chapter1-mid-hakua">Phase 1.5</button>
+    <button class="timeline-btn coming-soon" disabled>Phase 2</button>
+  </div>
+
+  <!-- 第一章 -->
+  <div id="chapter1-hakua" class="relationship-popup">
+  <div class="popup-content">
+    <h2>Phase 1</h2>
+
+    <div class="popup-box">
+					
+			 <img src="images/3/3-1.png" alt="higiri" class="popup-icon">
+		 <div class="popup-text">
+      <h3>班長さん</h3>
+      <p>「班長さん。自分の立場もわかってるつもりだけど、アタシを見るときの顔が怖い。」</p>
+		</div>
+    </div>
+
+    <div class="popup-box">
+		 <img src="images/3/3-2.png" alt="mikage" class="popup-icon">
+	<div class="popup-text">
+      <h3>副班長さん</h3>
+      <p>「副班長さん。良い人なのかな、みんなをまとめてる人。」</p>
+    </div>
+	  </div>
+
+	  <div class="popup-box">
+		 <img src="images/3/3-3.png" alt="shino" class="popup-icon">
+	<div class="popup-text">
+      <h3>蛇目さん</h3>
+      <p>「警戒されても仕方ないから、正しい反応だと思う。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-4.png" alt="jun" class="popup-icon">
+	<div class="popup-text">
+      <h3>雷明さん</h3>
+      <p>「場を明るくしてくれる、親切な人。」</p>
+    </div>
+	  </div>
+		  
+	  <div class="popup-box">
+		 <img src="images/3/3-5.png" alt="satsuki" class="popup-icon">
+	<div class="popup-text">
+      <h3>風嵐さん</h3>
+      <p>「変な人なのかな、でも料理が美味しくてちょっとよくわからない。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-6.png" alt="toa" class="popup-icon">
+	<div class="popup-text">
+      <h3>橙空</h3>
+      <p>「橙空でいいって言われちゃった。ほぼ付きっきりでアタシの面倒を見てくれる、どうしてこの人だけ警戒しないんだろ。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-8.png" alt="lobe" class="popup-icon">
+	<div class="popup-text">
+      <h3>ロベリアさん</h3>
+      <p>「かっこいい美人さんだ。外見は怖いけど、優しい人なのかも。」</p>
+    </div>
+	  </div>
+	  
+    <button class="close-btn">&times;</button>
+  </div>
+</div>
+
+
+  <!-- 第一章・中盤 -->
+  <div id="chapter1-mid-hakua" class="relationship-popup">
+    <div class="popup-content">
+      <h2>Phase 1.5</h2>
+            <div class="popup-box">
+					
+			 <img src="images/3/3-1.png" alt="mikage" class="popup-icon">
+		 <div class="popup-text">
+      <h3>緋桐さん</h3>
+      <p>「どこか寂しそうに見えるんだ。でも、どうして人を殺して、平然とできるの。アタシは許せない。」</p>
+		</div>
+    </div>
+
+    <div class="popup-box">
+		 <img src="images/3/3-2.png" alt="mikage" class="popup-icon">
+	<div class="popup-text">
+      <h3>海影さん</h3>
+      <p>「前言撤回、なんか変な人だった。いや、助けてくれるし頼りにはなるんだけど。」</p>
+    </div>
+	  </div>
+
+	  <div class="popup-box">
+		 <img src="images/3/3-3.png" alt="shino" class="popup-icon">
+	<div class="popup-text">
+      <h3>紫乃さん</h3>
+      <p>「考えが大人なだけで、優しい人だった。たまに子供っぽくて、振り回されることもあるかな。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-4.png" alt="satsuki" class="popup-icon">
+	<div class="popup-text">
+      <h3>純さん</h3>
+      <p>「体質のことも聞いたけど、やっぱりいい人だよ。ちょっと失礼だけど憎めない加減というか。」</p>
+    </div>
+	  </div>
+		  
+	  <div class="popup-box">
+		 <img src="images/3/3-5.png" alt="satsuki" class="popup-icon">
+	<div class="popup-text">
+      <h3>冴月さん</h3>
+      <p>「思ってたより悪い人じゃなかった、遠慮のなさが心地いいって感じかな。いや、やっぱ遠慮してほしいかも。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-6.png" alt="toa" class="popup-icon">
+	<div class="popup-text">
+      <h3>橙空</h3>
+      <p>「一緒にいるのが普通になってきたなぁ。ありがたいけどたまに世話焼きすぎなとこある、一人でできるってば！」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-8.png" alt="lobe" class="popup-icon">
+	<div class="popup-text">
+      <h3>ロベリアさん</h3>
+      <p>「この世界で一番安心できる人。一緒にお茶する時間が好きなんだ。」</p>
+    </div>
+	  </div>
+
+      <button class="close-btn">&times;</button>
+
+    </div>
+  </div>
+
+
+</section>
+		   	   
+  </div>
+		</div>	
+ 		
+	
+		<!-- ロベリア -->		
+  <div class="character-slide" id="lobe">
+	   <div class="slide-content">
+	    <div class="title-box">
+			<h1>ロベリア・カーディナリス</h1>
+			<h2>LOBELIA CARDINALIS</h2>
+	  </div>
+	    <div class="content">
+			<img src="images/2/2-8.png" alt="lobe" class="main-image">	
+			<div class="text-box">
+		  <h3>
+			年   齢：27歳<br>
+			誕生日：１１/１５<br>
+			身   長：170cm<br>
+			所   属：オーゼルグ機構<br>
+			<span>　　　　局長補佐</span>　　　	  
+			<br>
+			好きなこと：仕事、ティータイム<br>
+			好きな食べ物：紅茶、焼き菓子<br>
+			苦手なもの：料理<br>
+			嫌いなもの：死<br>
+			人　　称：私 / お前<br>
+			家族構成：なし
+		  </h3>
+		  </div>
+		   </div>
+	   <div class="profile-box">
+    <p>第７班を含む特異現象対策課を管轄下に置く局長補佐。<br>
+	異国出身の元軍人。ノンファクターだが、圧倒的強者。<br>
+	一見クールだが情に厚く、部下からの信頼も厚い。<br>
+	過去の抗争で多くの仲間と想い人を失っている。<br>
+	強く出られない立場でも、「守る」ための判断を下す。
+	</p>
+	  </div>
+		   
+	<div class="quote-box">
+    <p>「これも仕事なんだ。」<br>
+		「私が指示を出さない限り、殺すな。」<br>
+		「命知らずめ、私を誰だと思っている。」
+	</p>
+	</div>
+		   
+		 <!-- ▼過去をみるボタン -->
+<div class="past-trigger">
+  <button id="openPast-lobe">BACKGROUND</button>
+</div>
+
+<!-- ▼ポップアップ内容 -->
+<div id="pastModal-lobe" class="past-modal">
+  <div class="past-content">
+    <span id="closePast-lobe" class="close-btn">&times;</span>
+
+
+    <div class="past-timeline">
+      <div class="past-card">
+        <span class="past-age">出生</span>
+        <p>
+			生まれも親も知らずに捨てられ、<br>
+			荒んだ街で生き延びる。
+		</p>
+      </div>
+
+      <div class="past-card">
+        <span class="past-age">7歳</span>
+        <p>
+		学費免除を餌に孤児を集め、<br>
+		戦闘要員を育成する軍事学校へ入学。
+		</p>
+      </div>
+		
+		<div class="past-card">
+        <span class="past-age">10歳</span>
+        <p>
+		軍事学校で同年代の少年と親しくなり、<br>
+		多くの仲間に囲まれて過ごす。
+		</p>
+		</div>
+		
+		<div class="past-card">
+        <span class="past-age">13歳</span>
+        <p>
+		やがて実戦に投入され、戦場で戦うようになる。
+		</p>
+      </div>
+		
+		<div class="past-card">
+        <span class="past-age">17歳</span>
+        <p>
+		最も親しかった少年が戦死し、<br>
+		その最期に互いの想いが両片想いだったと気づく。
+		</p>
+      </div>
+		
+		<div class="past-card">
+        <span class="past-age">27歳</span>
+        <p>
+		現在。実績を重ねて昇格し、<br>
+		異動を経て複数チームを管轄する管理職となる。
+		</p>
+      </div>
+	
+    </div>
+  </div>
+</div>
+
+		   
+<section class="relationship-section">
+  <h2>RELATIONSHIP</h2>
+
+  <div class="timeline-container">
+    <button class="timeline-btn" data-popup="chapter1-lobe">Phase 1</button>
+    <button class="timeline-btn" data-popup="chapter1-mid-lobe">Phase 1.5</button>
+    <button class="timeline-btn coming-soon" disabled>Phase 2</button>
+  </div>
+
+  <!-- 第一章 -->
+  <div id="chapter1-lobe" class="relationship-popup">
+  <div class="popup-content">
+    <h2>Phase 1</h2>
+
+    <div class="popup-box">
+					
+			 <img src="images/3/3-1.png" alt="higiri" class="popup-icon">
+		 <div class="popup-text">
+      <h3>緋桐</h3>
+      <p>「任せた仕事はしっかりやる、問題はない。別に他のメンバーと仲良くしろとも言わないさ。」</p>
+		</div>
+    </div>
+
+    <div class="popup-box">
+		 <img src="images/3/3-2.png" alt="mikage" class="popup-icon">
+	<div class="popup-text">
+      <h3>海影</h3>
+      <p>「呆れることもあるが、業務上問題ない。こちらを気遣うこともあるし、悪いヤツではないんだがな。」</p>
+    </div>
+	  </div>
+
+	  <div class="popup-box">
+		 <img src="images/3/3-3.png" alt="shino" class="popup-icon">
+	<div class="popup-text">
+      <h3>紫乃</h3>
+      <p>「礼儀がなっていて要領も良いな。本人の責任感から無茶をするところは心配だ。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-4.png" alt="jun" class="popup-icon">
+	<div class="popup-text">
+      <h3>純</h3>
+      <p>「可愛いヤツだよ。普段の振る舞いもあってか、人を動かす力を持っている、その上度胸もある。」</p>
+    </div>
+	  </div>
+		  
+	  <div class="popup-box">
+		 <img src="images/3/3-5.png" alt="satsuki" class="popup-icon">
+	<div class="popup-text">
+      <h3>冴月</h3>
+      <p>「とんだ暴れん坊で、初対面で喧嘩を売られたときは流石に驚いたさ。あまりにも命知らずでな。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-6.png" alt="toa" class="popup-icon">
+	<div class="popup-text">
+      <h3>橙空</h3>
+      <p>「素直な良い子だ。余計にこの環境に置くのは、正直申し訳ないと思っている。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-7.png" alt="hakua" class="popup-icon">
+	<div class="popup-text">
+      <h3>新入り</h3>
+      <p>「他の機関に渡さないことを口実にして、こんな子供を利用する形になるなんてな…すまない。」</p>
+    </div>
+	  </div>
+	  
+    <button class="close-btn">&times;</button>
+  </div>
+</div>
+
+
+  <!-- 第一章・中盤 -->
+  <div id="chapter1-mid-lobe" class="relationship-popup">
+    <div class="popup-content">
+      <h2>Phase 1.5</h2>
+            <div class="popup-box">
+					
+			 <img src="images/3/3-1.png" alt="mikage" class="popup-icon">
+		 <div class="popup-text">
+      <h3>緋桐</h3>
+      <p>「…何か事情があるなら言え。」</p>
+		</div>
+    </div>
+
+    <div class="popup-box">
+		 <img src="images/3/3-2.png" alt="mikage" class="popup-icon">
+	<div class="popup-text">
+      <h3>海影</h3>
+      <p>「子供に悪影響を与えるなよ。」</p>
+    </div>
+	  </div>
+
+	  <div class="popup-box">
+		 <img src="images/3/3-3.png" alt="shino" class="popup-icon">
+	<div class="popup-text">
+      <h3>紫乃</h3>
+      <p>「お前には色々と苦労をかけているな、無理はしなくていい。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-4.png" alt="satsuki" class="popup-icon">
+	<div class="popup-text">
+      <h3>純</h3>
+      <p>「お前はそのままでいてくれると、私も他のヤツらも安心するだろう。」</p>
+    </div>
+	  </div>
+		  
+	  <div class="popup-box">
+		 <img src="images/3/3-5.png" alt="satsuki" class="popup-icon">
+	<div class="popup-text">
+      <h3>冴月</h3>
+      <p>「前より少し纏う空気が柔らかくなったか？悪いことじゃないさ。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-6.png" alt="toa" class="popup-icon">
+	<div class="popup-text">
+      <h3>橙空</h3>
+      <p>「業務に白愛の世話に、よくやってくれている。お前もまだ子供として守られるべき対象だ。」</p>
+    </div>
+	  </div>
+	  
+	  <div class="popup-box">
+		 <img src="images/3/3-7.png" alt="hakua" class="popup-icon">
+	<div class="popup-text">
+      <h3>白愛</h3>
+      <p>「お前といる時間は悪くないよ。むしろ、お前の優しさには感謝している。」</p>
+    </div>
+	  </div>
+
+      <button class="close-btn">&times;</button>
+
+    </div>
+  </div>
+
+
+</section>
+		   	   
+  </div>
+		</div>	
+ 		
+		
+
+		
+		
+		
+		
+		
+  
+
+  
+ 
+
+ 
+		
+  
+  
+		
+ 			
+		
+		
+		
+		
+		
+	
+
+</section>
+
+<!-- キャラ選択アイコン -->
+	
+<div class="character-nav">
+  <img src="images/3/3-1.png" alt="higiri" onclick="showCharacter('higiri')">
+	
+  <img src="images/3/3-2.png" alt="mikage" onclick="showCharacter('mikage')">
+	
+  <img src="images/3/3-3.png" alt="shino" onclick="showCharacter('shino')">
+	
+  <img src="images/3/3-4.png" alt="jun" onclick="showCharacter('jun')">
+	
+  <img src="images/3/3-5.png" alt="satsuki" onclick="showCharacter('satsuki')">
+
+  <img src="images/3/3-6.png" alt="toa" onclick="showCharacter('toa')">
+
+  <img src="images/3/3-7.png" alt="hakua" onclick="showCharacter('hakua')">
+	
+  <img src="images/3/3-8.png" alt="lobe" onclick="showCharacter('lobe')">
+
+</div>	
+	
+		
+<section>
+	<div>
+      <a href="index.html" class="back-btn">← BACK</a>
+    </div>
+  </section>
+
+<footer>
+	  <h1 class="logo">
+    <a href="index.html">UNDEAD REVIVE</a>
+  </h1>  
+<p class="footer-credit">© 2025 UNDEAD REVIVE PROJECT</p>
+<div class="footer-links">
+  <a href="character.html">CHARACTER</a>
+  <a href="world.html">WORLD</a>
+  <a href="story.html">STORY</a>
+</div>
+<div class="footer-social">
+  <a href="https://x.com/523kumashirou" target="_blank">X</a> /
+  <a href="https://www.pixiv.net/users/106754010" target="_blank">Pixiv</a> /
+  <a href="https://www.youtube.com/@kumashirou5233" target="_blank">youtube</a> /
+  <a href="https://www.tiktok.com/@kumashirou523" target="_blank">TikTok</a> /
+  <a href="https://marshmallow-qa.com/9b50gl3qi54289k" target="_blank">マシュマロ</a>
+	
+  <!--<a href="https://skeb.jp/@523kumashirou" target="_blank">skeb</a>-->
+</div>
+<p class="footer-note">
+本作品はフィクションです。実在の人物・団体・事件などとは一切関係ありません。  <br>
+本サイトに掲載されているすべての画像・文章の著作権は制作者に帰属します。  <br>
+無断転載・二次配布を固く禁じます。<br>  
+<br>
+This work is a fiction. <br>
+Any resemblance to actual persons, organizations, or events is purely coincidental.  <br>
+All images and texts on this site are copyrighted by the creator.  <br>
+Unauthorized reproduction or redistribution is strictly prohibited.
+</p>
+</footer>
+  	
+
+<!-- 緋桐 -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* ================================
+     ▼ BACKGROUND モーダル
+  ================================= */
+  const openPast = document.getElementById("openPast");
+  const closePast = document.getElementById("closePast");
+  const pastModal = document.getElementById("pastModal");
+
+  openPast?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    pastModal.style.display = "block";
+  });
+
+  closePast?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    pastModal.style.display = "none";
+  });
+
+  pastModal?.addEventListener("click", (e) => {
+    if (e.target === pastModal) {
+      pastModal.style.display = "none";
+    }
+  });
+
+
+  /* ================================
+     ▼ FACTOR PROFILE モーダル
+  ================================= */
+  const openAbility = document.getElementById("openAbility-higiri");
+  const closeAbility = document.getElementById("closeAbility-higiri");
+  const abilityModal = document.getElementById("abilityModal-higiri");
+
+  openAbility?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    abilityModal.style.display = "block";
+  });
+
+  closeAbility?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    abilityModal.style.display = "none";
+  });
+
+  abilityModal?.addEventListener("click", (e) => {
+    if (e.target === abilityModal) {
+      abilityModal.style.display = "none";
+    }
+  });
+
+
+  /* ================================
+     ▼ RELATIONSHIP ポップアップ
+  ================================= */
+  const openBtns = document.querySelectorAll(".timeline-btn");
+  const popups = document.querySelectorAll(".relationship-popup");
+
+  // ボタンで開く
+  openBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const targetId = btn.getAttribute("data-popup");
+      const popup = document.getElementById(targetId);
+
+      // 他のポップアップを閉じる
+      popups.forEach(p => p.classList.remove("active"));
+
+      if (popup) popup.classList.add("active");
+    });
+  });
+
+  // × ボタンで閉じる
+  popups.forEach((popup) => {
+    const closeBtn = popup.querySelector(".popup-content > .close-btn");
+    closeBtn?.addEventListener("click", (e) => {
+      e.stopPropagation();
+      popup.classList.remove("active");
+    });
+
+    // 内側クリックは閉じない
+    popup.querySelector(".popup-content")?.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+  });
+
+  // 背景クリックで閉じる
+  document.addEventListener("click", (e) => {
+    popups.forEach((popup) => {
+      if (
+        popup.classList.contains("active") &&
+        !e.target.closest(".popup-content") &&
+        !e.target.closest(".timeline-btn")
+      ) {
+        popup.classList.remove("active");
+      }
+    });
+  });
+
+});
+  
+</script>
+	
+<!-- 海影 -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // ▼ BACKGROUND モーダル
+  const openPastBtn = document.getElementById("openPast-mikage");
+  const pastModal = document.getElementById("pastModal-mikage");
+  const closePastBtn = document.getElementById("closePast-mikage");
+
+  openPastBtn.addEventListener("click", () => {
+    pastModal.style.display = "block";
+  });
+
+  closePastBtn.addEventListener("click", () => {
+    pastModal.style.display = "none";
+  });
+
+  // モーダル外クリックで閉じる
+  window.addEventListener("click", (e) => {
+    if (e.target === pastModal) pastModal.style.display = "none";
+  });
+
+  // ▼ FACTOR モーダル
+  const openAbilityBtn = document.getElementById("openAbility-mikage");
+  const abilityModal = document.getElementById("abilityModal-mikage");
+  const closeAbilityBtn = document.getElementById("closeAbility-mikage");
+
+  openAbilityBtn.addEventListener("click", () => {
+    abilityModal.style.display = "block";
+  });
+
+  closeAbilityBtn.addEventListener("click", () => {
+    abilityModal.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === abilityModal) abilityModal.style.display = "none";
+  });
+
+  // ▼ RELATIONSHIP モーダル（Phase 1 / 1.5）
+  const timelineBtns = document.querySelectorAll("#mikage .timeline-btn");
+  timelineBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const popupId = btn.getAttribute("data-popup");
+      const popup = document.getElementById(popupId);
+      if (popup) popup.style.display = "block";
+    });
+  });
+
+  const relationshipPopups = document.querySelectorAll("#mikage .relationship-popup");
+  relationshipPopups.forEach(popup => {
+    const closeBtn = popup.querySelector(".close-btn");
+    closeBtn.addEventListener("click", () => {
+      popup.style.display = "none";
+    });
+    // モーダル外クリックで閉じる
+    window.addEventListener("click", (e) => {
+      if (e.target === popup) popup.style.display = "none";
+    });
+  });
+});
+</script>
+
+<!-- 紫乃 -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // ▼ 過去ポップアップ
+  const openPastShino = document.getElementById('openPast-shino');
+  const pastModalShino = document.getElementById('pastModal-shino');
+  const closePastShino = document.getElementById('closePast-shino');
+
+  openPastShino.addEventListener('click', function() {
+    pastModalShino.style.display = 'block';
+  });
+
+  closePastShino.addEventListener('click', function() {
+    pastModalShino.style.display = 'none';
+  });
+
+  window.addEventListener('click', function(e) {
+    if (e.target === pastModalShino) {
+      pastModalShino.style.display = 'none';
+    }
+  });
+
+  // ▼ FACTOR PROFILEポップアップ
+  const openAbilityShino = document.getElementById('openAbility-shino');
+  const abilityModalShino = document.getElementById('abilityModal-shino');
+  const closeAbilityShino = document.getElementById('closeAbility-shino');
+
+  openAbilityShino.addEventListener('click', function() {
+    abilityModalShino.style.display = 'block';
+  });
+
+  closeAbilityShino.addEventListener('click', function() {
+    abilityModalShino.style.display = 'none';
+  });
+
+  window.addEventListener('click', function(e) {
+    if (e.target === abilityModalShino) {
+      abilityModalShino.style.display = 'none';
+    }
+  });
+
+  // ▼ RELATIONSHIPポップアップ（Phase 1 / Phase 1.5）
+  const timelineButtonsShino = document.querySelectorAll('#shino .timeline-btn');
+  timelineButtonsShino.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const popupId = btn.dataset.popup;
+      const popup = document.getElementById(popupId);
+      if (!popup) return;
+      popup.style.display = 'block';
+
+      // ×ボタンで閉じる
+      const closeBtn = popup.querySelector('.close-btn');
+      closeBtn.addEventListener('click', function() {
+        popup.style.display = 'none';
+      });
+
+      // モーダル外クリックで閉じる
+      window.addEventListener('click', function(e) {
+        if (e.target === popup) {
+          popup.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>
+
+<!-- 純 -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  // ▼ 過去ポップアップ
+  const openPastJun = document.getElementById('openPast-jun');
+  const pastModalJun = document.getElementById('pastModal-jun');
+  const closePastJun = document.getElementById('closePast-jun');
+
+  openPastJun.addEventListener('click', function() {
+    pastModalJun.style.display = 'block';
+  });
+
+  closePastJun.addEventListener('click', function() {
+    pastModalJun.style.display = 'none';
+  });
+
+  window.addEventListener('click', function(e) {
+    if (e.target === pastModalJun) {
+      pastModalJun.style.display = 'none';
+    }
+  });
+
+  // ▼ FACTOR PROFILEポップアップ
+  const openAbilityJun = document.getElementById('openAbility-jun');
+  const abilityModalJun = document.getElementById('abilityModal-jun');
+  const closeAbilityJun = document.getElementById('closeAbility-jun');
+
+  openAbilityJun.addEventListener('click', function() {
+    abilityModalJun.style.display = 'block';
+  });
+
+  closeAbilityJun.addEventListener('click', function() {
+    abilityModalJun.style.display = 'none';
+  });
+
+  window.addEventListener('click', function(e) {
+    if (e.target === abilityModalJun) {
+      abilityModalJun.style.display = 'none';
+    }
+  });
+
+  // ▼ RELATIONSHIPポップアップ（Phase 1 / Phase 1.5など）
+  const timelineButtonsJun = document.querySelectorAll('#jun .timeline-btn');
+  timelineButtonsJun.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const popupId = btn.dataset.popup;
+      const popup = document.getElementById(popupId);
+      if (!popup) return;
+      popup.style.display = 'block';
+
+      // ×ボタンで閉じる
+      const closeBtn = popup.querySelector('.close-btn');
+      closeBtn.addEventListener('click', function() {
+        popup.style.display = 'none';
+      });
+
+      // モーダル外クリックで閉じる
+      window.addEventListener('click', function(e) {
+        if (e.target === popup) {
+          popup.style.display = 'none';
+        }
+      });
+    });
+  });
+
+});
+</script>
+
+
+<!-- 冴月 -->
+<script>
+// ===== 過去（BACKGROUND）モーダル =====
+const openPastSatsuki = document.getElementById("openPast-satsuki");
+const pastModalSatsuki = document.getElementById("pastModal-satsuki");
+const closePastSatsuki = document.getElementById("closePast-satsuki");
+
+openPastSatsuki.addEventListener("click", () => {
+  pastModalSatsuki.style.display = "block";
+});
+
+closePastSatsuki.addEventListener("click", () => {
+  pastModalSatsuki.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === pastModalSatsuki) {
+    pastModalSatsuki.style.display = "none";
+  }
+});
+
+// ===== ファクター（ABILITY）モーダル =====
+const openAbilitySatsuki = document.getElementById("openAbility-satsuki");
+const abilityModalSatsuki = document.getElementById("abilityModal-satsuki");
+const closeAbilitySatsuki = document.getElementById("closeAbility-satsuki");
+
+openAbilitySatsuki.addEventListener("click", () => {
+  abilityModalSatsuki.style.display = "block";
+});
+
+closeAbilitySatsuki.addEventListener("click", () => {
+  abilityModalSatsuki.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === abilityModalSatsuki) {
+    abilityModalSatsuki.style.display = "none";
+  }
+});
+
+// ===== 関係性ポップアップ =====
+const timelineBtnsSatsuki = document.querySelectorAll("#satsuki .timeline-btn");
+timelineBtnsSatsuki.forEach(btn => {
+  const popupId = btn.dataset.popup;
+  const popup = document.getElementById(popupId);
+  const closeBtn = popup.querySelector(".close-btn");
+
+  btn.addEventListener("click", () => {
+    popup.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    popup.classList.remove("active");
+  });
+
+  // モーダル外クリックで閉じる
+  window.addEventListener("click", (e) => {
+    if (e.target === popup) {
+      popup.classList.remove("active");
+    }
+  });
+});
+</script>
+	
+<!-- 橙空 -->
+<script>
+// ===== 過去（BACKGROUND）モーダル =====
+const openPastToa = document.getElementById("openPast-toa");
+const pastModalToa = document.getElementById("pastModal-toa");
+const closePastToa = document.getElementById("closePast-toa");
+
+openPastToa.addEventListener("click", () => {
+  pastModalToa.style.display = "block";
+});
+
+closePastToa.addEventListener("click", () => {
+  pastModalToa.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === pastModalToa) {
+    pastModalToa.style.display = "none";
+  }
+});
+
+// ===== ファクター（ABILITY）モーダル =====
+const openAbilityToa = document.getElementById("openAbility-toa");
+const abilityModalToa = document.getElementById("abilityModal-toa");
+const closeAbilityToa = document.getElementById("closeAbility-toa");
+
+openAbilityToa.addEventListener("click", () => {
+  abilityModalToa.style.display = "block";
+});
+
+closeAbilityToa.addEventListener("click", () => {
+  abilityModalToa.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === abilityModalToa) {
+    abilityModalToa.style.display = "none";
+  }
+});
+
+// ===== 関係性ポップアップ =====
+const timelineBtnsToa = document.querySelectorAll("#toa .timeline-btn");
+timelineBtnsToa.forEach(btn => {
+  const popupId = btn.dataset.popup;
+  const popup = document.getElementById(popupId);
+  const closeBtn = popup.querySelector(".close-btn");
+
+  btn.addEventListener("click", () => {
+    popup.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    popup.classList.remove("active");
+  });
+
+  // モーダル外クリックで閉じる
+  window.addEventListener("click", (e) => {
+    if (e.target === popup) {
+      popup.classList.remove("active");
+    }
+  });
+});
+
+</script>
+	
+<!-- 白愛 -->	
+<script>
+// ===== 過去（BACKGROUND）モーダル =====
+const openPastHakua = document.getElementById("openPast-hakua");
+const pastModalHakua = document.getElementById("pastModal-hakua");
+const closePastHakua = document.getElementById("closePast-hakua");
+
+openPastHakua.addEventListener("click", () => {
+  pastModalHakua.style.display = "block";
+});
+
+closePastHakua.addEventListener("click", () => {
+  pastModalHakua.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === pastModalHakua) {
+    pastModalHakua.style.display = "none";
+  }
+});
+
+// ===== ファクター（ABILITY）モーダル =====
+const openAbilityHakua = document.getElementById("openAbility-hakua");
+const abilityModalHakua = document.getElementById("abilityModal-hakua");
+const closeAbilityHakua = document.getElementById("closeAbility-hakua");
+
+openAbilityHakua.addEventListener("click", () => {
+  abilityModalHakua.style.display = "block";
+});
+
+closeAbilityHakua.addEventListener("click", () => {
+  abilityModalHakua.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === abilityModalHakua) {
+    abilityModalHakua.style.display = "none";
+  }
+});
+
+// ===== 関係性ポップアップ =====
+const timelineBtnsHakua = document.querySelectorAll("#hakua .timeline-btn");
+timelineBtnsHakua.forEach(btn => {
+  const popupId = btn.dataset.popup;
+  const popup = document.getElementById(popupId);
+  const closeBtn = popup.querySelector(".close-btn");
+
+  btn.addEventListener("click", () => {
+    popup.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    popup.classList.remove("active");
+  });
+
+  // モーダル外クリックで閉じる
+  window.addEventListener("click", (e) => {
+    if (e.target === popup) {
+      popup.classList.remove("active");
+    }
+  });
+});
+
+</script>
+
+<!-- ロベリア -->	
+<script>
+// ================================
+//  ロベリア（lobe）ポップアップ関連
+// ================================
+
+// ▼過去を見る（BACKGROUND）
+const openPastLobe = document.getElementById("openPast-lobe");
+const pastModalLobe = document.getElementById("pastModal-lobe");
+const closePastLobe = document.getElementById("closePast-lobe");
+
+if (openPastLobe && pastModalLobe && closePastLobe) {
+  openPastLobe.addEventListener("click", () => {
+    pastModalLobe.style.display = "block";
+  });
+
+  closePastLobe.addEventListener("click", () => {
+    pastModalLobe.style.display = "none";
+  });
+
+  window.addEventListener("click", (event) => {
+    if (event.target === pastModalLobe) {
+      pastModalLobe.style.display = "none";
+    }
+  });
+}
+
+// ▼RELATIONSHIP（Phase切り替え）
+document.querySelectorAll('#lobe .timeline-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const popupId = button.dataset.popup;
+    const popup = document.getElementById(popupId);
+    if (popup) {
+      popup.style.display = 'block';
+    }
+  });
+});
+
+// 閉じるボタン
+document.querySelectorAll('#lobe .relationship-popup .close-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.closest('.relationship-popup').style.display = 'none';
+  });
+});
+
+// モーダル外クリックで閉じる
+window.addEventListener('click', (event) => {
+  document.querySelectorAll('#lobe .relationship-popup').forEach(popup => {
+    if (event.target === popup) {
+      popup.style.display = 'none';
+    }
+  });
+});
+</script>
+	
+<!-- スライド -->	
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.character-slide');
+  const slideCount = slides.length;
+
+  // 初期化
+  slides.forEach((slide, index) => {
+    slide.style.transition = 'transform 0.6s ease';
+    slide.style.position = 'absolute';
+    slide.style.top = '0';
+    slide.style.left = '0';
+    slide.style.width = '100%';
+    slide.style.opacity = index === 0 ? '1' : '0';
+    slide.style.transform = index === 0 ? 'translateX(0)' : 'translateX(100%)';
+  });
+
+  function showCharacter(id) {
+    const nextSlide = Array.from(slides).findIndex(slide => slide.id === id);
+    if (nextSlide === currentSlide) return;
+
+    const direction = nextSlide > currentSlide ? 1 : -1;
+    const current = slides[currentSlide];
+    const next = slides[nextSlide];
+
+    // スライド方向に応じたアニメーション
+    current.style.transform = `translateX(${-100 * direction}%)`;
+    current.style.opacity = '0';
+    next.style.transform = `translateX(${100 * direction}%)`;
+    next.style.opacity = '1';
+
+    requestAnimationFrame(() => {
+      next.style.transform = 'translateX(0)';
+    });
+
+    currentSlide = nextSlide;
+  }
+
+	
+
+</script>
+<script>
+/*
+  改良版 showCharacter:
+  - 現在のスライドを確実に退場させ、次スライドの inline style をリセットして
+    中身が見えるようにする（opacity/transform/visibility/display/pointer-events/z-index を扱う）。
+  - アニメーション完了後にクリーンアップ。
+*/
+function showCharacter(id) {
+  const slides = Array.from(document.querySelectorAll('.character-slide'));
+  const current = document.querySelector('.character-slide.active');
+  const next = document.getElementById(id);
+
+  if (!next) {
+    console.warn('showCharacter: ターゲットスライドが見つかりません:', id);
+    return;
+  }
+  if (current === next) return;
+
+  // find indices for direction (optional, keeps animation natural)
+  const curIdx = slides.indexOf(current);
+  const nextIdx = slides.indexOf(next);
+  const dir = nextIdx > curIdx ? 1 : -1;
+
+  // prepare next: make sure it's visible in layout and above
+  // clear any lingering inline styles first
+  next.style.transition = 'none';
+  next.style.transform = `translateX(${100 * dir}%)`;
+  next.style.opacity = '0';
+  next.style.visibility = 'visible';
+  next.style.display = 'flex';            // ensures inner content participates in layout
+  next.style.pointerEvents = 'auto';
+  next.style.zIndex = '50';
+
+  // force reflow so the immediate style change is applied before transition
+  void next.offsetWidth;
+
+  // animate both slides
+  const duration = 600; // ms (CSS transition should match)
+  // enable transitions
+  next.style.transition = `transform ${duration}ms ease, opacity ${duration}ms ease`;
+
+  if (current) {
+    current.style.transition = `transform ${duration}ms ease, opacity ${duration}ms ease`;
+    current.style.zIndex = '40';
+    // move current out
+    current.style.transform = `translateX(${-100 * dir}%)`;
+    current.style.opacity = '0';
+    current.style.pointerEvents = 'none';
+  }
+
+  // bring next in
+  requestAnimationFrame(() => {
+    next.style.transform = 'translateX(0)';
+    next.style.opacity = '1';
+  });
+
+  // cleanup after animation
+  setTimeout(() => {
+    // remove active from all and reset inline styles for non-active slides
+    slides.forEach(s => {
+      s.classList.remove('active');
+      if (s !== next) {
+        // hide non-active slides but keep them ready (not display:none — keeps content measurable)
+        s.style.visibility = 'hidden';
+        s.style.pointerEvents = 'none';
+        s.style.opacity = '0';
+        s.style.transform = `translateX(${100 * dir}%)`;
+        s.style.zIndex = '1';
+        // clear transitions to avoid future weirdness
+        s.style.transition = '';
+        // don't set display:none because that can cause "真っ白" issues when re-adding
+      } else {
+        // ensure next becomes the active, and clear transitional inline styles except needed ones
+        s.classList.add('active');
+        s.style.visibility = 'visible';
+        s.style.pointerEvents = 'auto';
+        s.style.opacity = '1';
+        s.style.transform = 'translateX(0)';
+        s.style.zIndex = '3';
+        s.style.transition = '';
+      }
+    });
+  }, duration + 20);
+}
+
+/* Optional: keyboard left/right for quick testing */
+document.addEventListener('keydown', (e) => {
+  const slides = Array.from(document.querySelectorAll('.character-slide'));
+  const active = document.querySelector('.character-slide.active');
+  const currentIndex = slides.indexOf(active);
+  if (e.key === 'ArrowRight') {
+    const next = slides[(currentIndex + 1) % slides.length];
+    showCharacter(next.id);
+  } else if (e.key === 'ArrowLeft') {
+    const prev = slides[(currentIndex - 1 + slides.length) % slides.length];
+    showCharacter(prev.id);
+  }
+});
+</script>
+<!-- backgroundスライド -->
+<script>
+// ===== BACKGROUNDモーダル内をスクロール可能にする =====
+
+// すべての past-modal を取得
+const pastModals = document.querySelectorAll(".past-modal");
+
+pastModals.forEach(modal => {
+  const content = modal.querySelector(".past-content");
+
+  // モーダル開いたらスクロール有効
+  modal.addEventListener("wheel", (e) => {
+    // content内でのみスクロールさせる
+    if (content.scrollHeight > content.clientHeight) {
+      e.stopPropagation(); // 背景へのスクロールを防止
+    }
+  });
+
+  // モーダル外クリックで閉じるときにスクロール位置をリセット
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      content.scrollTop = 0;
+    }
+  });
+});
+
+</script>
+<!-- moreボタンからスライド -->
+<script>
+window.addEventListener('load', () => {
+  const hash = window.location.hash.replace('#', '');
+  if (hash) {
+    showCharacter(hash);
+  } else {
+    // ハッシュがなければ初期キャラ（例：higiri）を表示
+    showCharacter('higiri');
+  }
+});
+</script>
+
+
+	
+	
+	
+</body>
+	
+</html>
