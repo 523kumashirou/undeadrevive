@@ -3075,21 +3075,31 @@ window.addEventListener('load', () => {
 });
 </script>
 
-<script>// ハッシュが変わった時（ポップアップ経由でも）スライドを表示
-function initSlideFromHash() {
+<script>
+/*
+  キャラページ共通初期化スクリプト
+  - ページ読み込み時に最初のスライドを表示
+  - ポップアップから飛んでもスライドが正しく表示される
+  - showCharacter() が既に定義されている前提
+*/
+window.addEventListener('DOMContentLoaded', () => {
+  // 1. ページ内の最初のキャラスライドを取得
+  const firstSlide = document.querySelector('.character-slide');
+
+  if (firstSlide) {
+    // 2. そのスライドのIDを使って表示
+    showCharacter(firstSlide.id);
+  }
+
+  // 3. optional: URLハッシュがある場合はそちらを優先
   const hash = window.location.hash.replace('#', '');
   if (hash) {
-    showCharacter(hash);
+    const targetSlide = document.getElementById(hash);
+    if (targetSlide) showCharacter(hash);
   }
-}
-
-// ページロード時にも実行（既存処理と重複しても安全）
-window.addEventListener('load', initSlideFromHash);
-
-// ハッシュが変わったときにも実行
-window.addEventListener('hashchange', initSlideFromHash);
+});
 </script>
-	
+
 	
 	
 </body>
