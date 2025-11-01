@@ -33,7 +33,7 @@
 	<section class="character-slider">
   <!-- 表示エリア -->
 		<!-- 緋桐 -->
-  <div class="character-slide active" id="higiri" class="character-slide active">
+  <div class="character-slide active" id="higiri">
 	   <div class="slide-content">
 	    <div class="title-box">
 			<h1>別火 緋桐</h1>
@@ -2645,7 +2645,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-
 <!-- 冴月 -->
 <script>
 // ===== 過去（BACKGROUND）モーダル =====
@@ -2895,146 +2894,107 @@ window.addEventListener('click', (event) => {
 });
 </script>
 	
-<!-- スライド -->	
+<!-- ================================
+     キャラクタースライド共通処理
+================================ -->
 <script>
-  let currentSlide = 0;
-  const slides = document.querySelectorAll('.character-slide');
-  const slideCount = slides.length;
-
-  // 初期化
-  slides.forEach((slide, index) => {
-    slide.style.transition = 'transform 0.6s ease';
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = Array.from(document.querySelectorAll('.character-slide'));
+  let currentSlide = slides.findIndex(s => s.classList.contains('active'));
+  if (currentSlide === -1) currentSlide = 0; // active がなければ最初を選択
+  slides.forEach((slide, idx) => {
+    slide.style.transition = 'transform 0.6s ease, opacity 0.6s ease';
     slide.style.position = 'absolute';
     slide.style.top = '0';
     slide.style.left = '0';
     slide.style.width = '100%';
-    slide.style.opacity = index === 0 ? '1' : '0';
-    slide.style.transform = index === 0 ? 'translateX(0)' : 'translateX(100%)';
+    slide.style.opacity = idx === currentSlide ? '1' : '0';
+    slide.style.transform = idx === currentSlide ? 'translateX(0)' : 'translateX(100%)';
+    slide.style.zIndex = idx === currentSlide ? '3' : '1';
+    slide.style.pointerEvents = idx === currentSlide ? 'auto' : 'none';
   });
 
-  function showCharacter(id) {
-    const nextSlide = Array.from(slides).findIndex(slide => slide.id === id);
-    if (nextSlide === currentSlide) return;
+  window.showCharacter = function(id) {
+    const next = document.getElementById(id);
+    const current = slides.find(s => s.classList.contains('active'));
+    if (!next || current === next) return;
 
-    const direction = nextSlide > currentSlide ? 1 : -1;
-    const current = slides[currentSlide];
-    const next = slides[nextSlide];
+    const curIdx = slides.indexOf(current);
+    const nextIdx = slides.indexOf(next);
+    const dir = nextIdx > curIdx ? 1 : -1;
 
-    // スライド方向に応じたアニメーション
-    current.style.transform = `translateX(${-100 * direction}%)`;
-    current.style.opacity = '0';
-    next.style.transform = `translateX(${100 * direction}%)`;
-    next.style.opacity = '1';
+    // 次スライド初期化
+    next.style.transition = 'none';
+    next.style.transform = `translateX(${100 * dir}%)`;
+    next.style.opacity = '0';
+    next.style.zIndex = '50';
+    next.style.pointerEvents = 'auto';
+    next.style.visibility = 'visible';
+    next.style.display = 'flex';
 
+    void next.offsetWidth; // reflow
+
+    // 現スライドを退場
+    if (current) {
+      current.style.transition = 'transform 0.6s ease, opacity 0.6s ease';
+      current.style.transform = `translateX(${-100 * dir}%)`;
+      current.style.opacity = '0';
+      current.style.pointerEvents = 'none';
+      current.style.zIndex = '40';
+    }
+
+    // 次スライドを登場
+    next.style.transition = 'transform 0.6s ease, opacity 0.6s ease';
     requestAnimationFrame(() => {
       next.style.transform = 'translateX(0)';
+      next.style.opacity = '1';
     });
 
-    currentSlide = nextSlide;
-  }
+    // アニメーション完了後にクリーンアップ
+    setTimeout(() => {
+      slides.forEach(s => {
+        s.classList.remove('active');
+        if (s !== next) {
+          s.style.visibility = 'hidden';
+          s.style.pointerEvents = 'none';
+          s.style.opacity = '0';
+          s.style.transform = `translateX(${100 * dir}%)`;
+          s.style.zIndex = '1';
+          s.style.transition = '';
+        } else {
+          s.classList.add('active');
+          s.style.visibility = 'visible';
+          s.style.pointerEvents = 'auto';
+          s.style.opacity = '1';
+          s.style.transform = 'translateX(0)';
+          s.style.zIndex = '3';
+          s.style.transition = '';
+        }
+      });
+    }, 620);
 
-	
+    currentSlide = nextIdx;
+  };
 
-</script>
-<script>
-/*
-  改良版 showCharacter:
-  - 現在のスライドを確実に退場させ、次スライドの inline style をリセットして
-    中身が見えるようにする（opacity/transform/visibility/display/pointer-events/z-index を扱う）。
-  - アニメーション完了後にクリーンアップ。
-*/
-function showCharacter(id) {
-  const slides = Array.from(document.querySelectorAll('.character-slide'));
-  const current = document.querySelector('.character-slide.active');
-  const next = document.getElementById(id);
+  // ハッシュがある場合は初期表示
+  const hash = window.location.hash.replace('#', '');
+  showCharacter(hash || 'higiri');
 
-  if (!next) {
-    console.warn('showCharacter: ターゲットスライドが見つかりません:', id);
-    return;
-  }
-  if (current === next) return;
-
-  // find indices for direction (optional, keeps animation natural)
-  const curIdx = slides.indexOf(current);
-  const nextIdx = slides.indexOf(next);
-  const dir = nextIdx > curIdx ? 1 : -1;
-
-  // prepare next: make sure it's visible in layout and above
-  // clear any lingering inline styles first
-  next.style.transition = 'none';
-  next.style.transform = `translateX(${100 * dir}%)`;
-  next.style.opacity = '0';
-  next.style.visibility = 'visible';
-  next.style.display = 'flex';            // ensures inner content participates in layout
-  next.style.pointerEvents = 'auto';
-  next.style.zIndex = '50';
-
-  // force reflow so the immediate style change is applied before transition
-  void next.offsetWidth;
-
-  // animate both slides
-  const duration = 600; // ms (CSS transition should match)
-  // enable transitions
-  next.style.transition = `transform ${duration}ms ease, opacity ${duration}ms ease`;
-
-  if (current) {
-    current.style.transition = `transform ${duration}ms ease, opacity ${duration}ms ease`;
-    current.style.zIndex = '40';
-    // move current out
-    current.style.transform = `translateX(${-100 * dir}%)`;
-    current.style.opacity = '0';
-    current.style.pointerEvents = 'none';
-  }
-
-  // bring next in
-  requestAnimationFrame(() => {
-    next.style.transform = 'translateX(0)';
-    next.style.opacity = '1';
+  // キーボードで切替（テスト用）
+  document.addEventListener('keydown', (e) => {
+    const active = slides.find(s => s.classList.contains('active'));
+    const currentIndex = slides.indexOf(active);
+    if (e.key === 'ArrowRight') {
+      const next = slides[(currentIndex + 1) % slides.length];
+      showCharacter(next.id);
+    } else if (e.key === 'ArrowLeft') {
+      const prev = slides[(currentIndex - 1 + slides.length) % slides.length];
+      showCharacter(prev.id);
+    }
   });
-
-  // cleanup after animation
-  setTimeout(() => {
-    // remove active from all and reset inline styles for non-active slides
-    slides.forEach(s => {
-      s.classList.remove('active');
-      if (s !== next) {
-        // hide non-active slides but keep them ready (not display:none — keeps content measurable)
-        s.style.visibility = 'hidden';
-        s.style.pointerEvents = 'none';
-        s.style.opacity = '0';
-        s.style.transform = `translateX(${100 * dir}%)`;
-        s.style.zIndex = '1';
-        // clear transitions to avoid future weirdness
-        s.style.transition = '';
-        // don't set display:none because that can cause "真っ白" issues when re-adding
-      } else {
-        // ensure next becomes the active, and clear transitional inline styles except needed ones
-        s.classList.add('active');
-        s.style.visibility = 'visible';
-        s.style.pointerEvents = 'auto';
-        s.style.opacity = '1';
-        s.style.transform = 'translateX(0)';
-        s.style.zIndex = '3';
-        s.style.transition = '';
-      }
-    });
-  }, duration + 20);
-}
-
-/* Optional: keyboard left/right for quick testing */
-document.addEventListener('keydown', (e) => {
-  const slides = Array.from(document.querySelectorAll('.character-slide'));
-  const active = document.querySelector('.character-slide.active');
-  const currentIndex = slides.indexOf(active);
-  if (e.key === 'ArrowRight') {
-    const next = slides[(currentIndex + 1) % slides.length];
-    showCharacter(next.id);
-  } else if (e.key === 'ArrowLeft') {
-    const prev = slides[(currentIndex - 1 + slides.length) % slides.length];
-    showCharacter(prev.id);
-  }
 });
 </script>
+
 <!-- backgroundスライド -->
 <script>
 // ===== BACKGROUNDモーダル内をスクロール可能にする =====
@@ -3075,28 +3035,6 @@ window.addEventListener('load', () => {
 });
 </script>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const slides = document.querySelectorAll('.character-slide');
-  slides.forEach((slide, index) => {
-    if (slide.classList.contains('active')) {
-      // 初期キャラ
-      slide.style.opacity = '1';
-      slide.style.transform = 'translateX(0)';
-      slide.style.zIndex = '3';
-    } else {
-      slide.style.opacity = '0';
-      slide.style.transform = 'translateX(100%)';
-      slide.style.zIndex = '1';
-    }
-    // 共通スタイル
-    slide.style.position = 'absolute';
-    slide.style.top = '0';
-    slide.style.left = '0';
-    slide.style.width = '100%';
-  });
-});
-</script>
 
 	
 	
