@@ -3101,6 +3101,27 @@ window.addEventListener('load', () => {
   initialSlide.style.visibility = 'visible';
 });
 </script>
+<!-- 既存の moreボタンからスライド用スクリプトの後 -->
+<script>
+document.querySelectorAll('.timeline-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const targetId = btn.dataset.popup;
+
+    // 関係性ポップアップ表示
+    const popup = document.getElementById(targetId);
+    if (popup) popup.classList.add('active');
+
+    // キャラクター表示を安全に切り替え
+    const slide = document.getElementById(targetId);
+    if (slide) {
+      requestAnimationFrame(() => {
+        showCharacter(targetId);
+      });
+    }
+  });
+});
+</script>
 
 
 
