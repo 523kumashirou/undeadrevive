@@ -3065,43 +3065,15 @@ pastModals.forEach(modal => {
 <!-- moreボタンからスライド -->
 <script>
 window.addEventListener('load', () => {
-  const slides = Array.from(document.querySelectorAll('.character-slide'));
-
-  // すべてのスライドを初期化
-  slides.forEach((slide, index) => {
-    slide.classList.remove('active');
-    slide.style.transition = '';
-    slide.style.transform = 'translateX(100%)';
-    slide.style.opacity = '0';
-    slide.style.pointerEvents = 'none';
-    slide.style.zIndex = '1';
-    slide.style.display = 'flex';        // display:noneだと白くなるのでflexに
-    slide.style.visibility = 'hidden';
-  });
-
   const hash = window.location.hash.replace('#', '');
-  let initialSlide;
-
   if (hash) {
-    initialSlide = document.getElementById(hash);
-    if (!initialSlide) {
-      console.warn('指定のハッシュが見つかりません:', hash);
-      initialSlide = slides[0];
-    }
+    showCharacter(hash);
   } else {
-    initialSlide = slides[0]; // ハッシュがなければ初期キャラ
+    // ハッシュがなければ初期キャラ（例：higiri）を表示
+    showCharacter('higiri');
   }
-
-  // 初期スライドを表示
-  initialSlide.classList.add('active');
-  initialSlide.style.transform = 'translateX(0)';
-  initialSlide.style.opacity = '1';
-  initialSlide.style.pointerEvents = 'auto';
-  initialSlide.style.zIndex = '3';
-  initialSlide.style.visibility = 'visible';
 });
 </script>
-
 
 
 	
