@@ -74,16 +74,16 @@ body{
   margin: 0 auto;
 }
 
- @media (max-width: 600px) {
+ /*  @media (max-width: 600px) {
   nav ul {
     flex-wrap: wrap;
     justify-content: center;
   }
   nav ul li {
-    flex: 1 1 50%; /* 2列になるように*/ 
+    flex: 1 1 50%; /* 2列になるように 
     text-align: center;
   }
-}
+}*/
 
 .hero-image {
 	width: 90%;
