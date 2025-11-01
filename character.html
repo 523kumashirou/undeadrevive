@@ -3065,49 +3065,44 @@ pastModals.forEach(modal => {
 <!-- moreボタンからスライド -->
 <script>
 window.addEventListener('load', () => {
-  const hash = window.location.hash.replace('#', '');
-  if (hash) {
-    showCharacter(hash);
-  } else {
-    // ハッシュがなければ初期キャラ（例：higiri）を表示
-    showCharacter('higiri');
-  }
-});
-</script>
+  const slides = Array.from(document.querySelectorAll('.character-slide'));
 
-<script>
-function initSlides() {
-  const slides = document.querySelectorAll('.character-slide');
+  // すべてのスライドを初期化
   slides.forEach((slide, index) => {
-    slide.style.position = 'absolute';
-    slide.style.top = '0';
-    slide.style.left = '0';
-    slide.style.width = '100%';
-    slide.style.transition = 'transform 0.6s ease, opacity 0.6s ease';
-    slide.style.opacity = index === 0 ? '1' : '0';
-    slide.style.transform = index === 0 ? 'translateX(0)' : 'translateX(100%)';
-    slide.style.zIndex = index === 0 ? '3' : '1';
-    slide.classList.toggle('active', index === 0);
-    slide.style.visibility = index === 0 ? 'visible' : 'hidden';
-    slide.style.pointerEvents = index === 0 ? 'auto' : 'none';
+    slide.classList.remove('active');
+    slide.style.transition = '';
+    slide.style.transform = 'translateX(100%)';
+    slide.style.opacity = '0';
+    slide.style.pointerEvents = 'none';
+    slide.style.zIndex = '1';
+    slide.style.display = 'flex';        // display:noneだと白くなるのでflexに
+    slide.style.visibility = 'hidden';
   });
-}
 
-// ページ読み込み時に初期化
-window.addEventListener('DOMContentLoaded', () => {
-  initSlides();
-
-  // ハッシュがある場合は優先
   const hash = window.location.hash.replace('#', '');
-  if (hash) {
-    const target = document.getElementById(hash);
-    if (target) showCharacter(hash);
-  }
-});
+  let initialSlide;
 
-// ポップアップから飛ぶときも initSlides() を呼ぶ
-// 例: <a href="char.html#mikage" onclick="initSlides()">海影を見る</a>
+  if (hash) {
+    initialSlide = document.getElementById(hash);
+    if (!initialSlide) {
+      console.warn('指定のハッシュが見つかりません:', hash);
+      initialSlide = slides[0];
+    }
+  } else {
+    initialSlide = slides[0]; // ハッシュがなければ初期キャラ
+  }
+
+  // 初期スライドを表示
+  initialSlide.classList.add('active');
+  initialSlide.style.transform = 'translateX(0)';
+  initialSlide.style.opacity = '1';
+  initialSlide.style.pointerEvents = 'auto';
+  initialSlide.style.zIndex = '3';
+  initialSlide.style.visibility = 'visible';
+});
 </script>
+
+
 
 	
 	
