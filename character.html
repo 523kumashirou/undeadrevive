@@ -3076,28 +3076,37 @@ window.addEventListener('load', () => {
 </script>
 
 <script>
-/*
-  キャラページ共通初期化スクリプト
-  - ページ読み込み時に最初のスライドを表示
-  - ポップアップから飛んでもスライドが正しく表示される
-  - showCharacter() が既に定義されている前提
-*/
+function initSlides() {
+  const slides = document.querySelectorAll('.character-slide');
+  slides.forEach((slide, index) => {
+    slide.style.position = 'absolute';
+    slide.style.top = '0';
+    slide.style.left = '0';
+    slide.style.width = '100%';
+    slide.style.transition = 'transform 0.6s ease, opacity 0.6s ease';
+    slide.style.opacity = index === 0 ? '1' : '0';
+    slide.style.transform = index === 0 ? 'translateX(0)' : 'translateX(100%)';
+    slide.style.zIndex = index === 0 ? '3' : '1';
+    slide.classList.toggle('active', index === 0);
+    slide.style.visibility = index === 0 ? 'visible' : 'hidden';
+    slide.style.pointerEvents = index === 0 ? 'auto' : 'none';
+  });
+}
+
+// ページ読み込み時に初期化
 window.addEventListener('DOMContentLoaded', () => {
-  // 1. ページ内の最初のキャラスライドを取得
-  const firstSlide = document.querySelector('.character-slide');
+  initSlides();
 
-  if (firstSlide) {
-    // 2. そのスライドのIDを使って表示
-    showCharacter(firstSlide.id);
-  }
-
-  // 3. optional: URLハッシュがある場合はそちらを優先
+  // ハッシュがある場合は優先
   const hash = window.location.hash.replace('#', '');
   if (hash) {
-    const targetSlide = document.getElementById(hash);
-    if (targetSlide) showCharacter(hash);
+    const target = document.getElementById(hash);
+    if (target) showCharacter(hash);
   }
 });
+
+// ポップアップから飛ぶときも initSlides() を呼ぶ
+// 例: <a href="char.html#mikage" onclick="initSlides()">海影を見る</a>
 </script>
 
 	
