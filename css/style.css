@@ -22,10 +22,10 @@ header{
 	line-height: 1.2;
 	text-align: center;
 	font-family: "Bebas Neue", sans-serif;
-	font-size: 60px;
+	font-size: 50px;
 	color:white;
 	text-decoration: none;
-	margin-left: 50px;
+	margin-left: 30px;
 }
 
 .logo a {
@@ -70,19 +70,20 @@ nav a:active {
 
 body{
 	background-color: white;
-	margin: 0;
+  width: 1280px;
+  margin: 0 auto;
 }
 
-/* @media (max-width: 600px) {
+ @media (max-width: 600px) {
   nav ul {
     flex-wrap: wrap;
     justify-content: center;
   }
   nav ul li {
-    flex: 1 1 50%; /* 2列になるように 
+    flex: 1 1 50%; /* 2列になるように*/ 
     text-align: center;
   }
-}*/
+}
 
 .hero-image {
 	width: 90%;
