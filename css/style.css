@@ -73,16 +73,16 @@ body{
 	margin: 0;
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   nav ul {
     flex-wrap: wrap;
     justify-content: center;
   }
   nav ul li {
-    flex: 1 1 50%; /* 2列になるように */
+    flex: 1 1 50%; /* 2列になるように 
     text-align: center;
   }
-}
+}*/
 
 .hero-image {
 	width: 90%;
@@ -165,12 +165,12 @@ body{
 }
 
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .icon-wrapper {
     width: 100px;
     height: 100px;
   }
-}
+}*/
 
 /* ポップアップの背景オーバーレイ */
 .popup-overlay {
@@ -444,7 +444,7 @@ footer .logo a:hover {
 }
 
 /* 小画面用に縦並びに */
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
   footer {
     padding: 2rem 0.8rem;
   }
@@ -465,7 +465,7 @@ footer .logo a:hover {
   .footer-social {
     font-size: 0.9rem;
   }
-}
+}*/
 
 
 
@@ -479,16 +479,6 @@ html, body {
 }
 
 
-/* ヘッダー */
-.main-nav ul {
-    flex-direction: column;
-    background: rgba(0,0,0,0.9);
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    display: none;
-  }
 /* 緋桐 */
 
 /* タイトルボックス */
@@ -946,7 +936,7 @@ html, body {
   width: 100%; height: 100%;
   background: rgba(0, 0, 0, 0.6);
   overflow: auto; /* 内部スクロールを許可 */
-  top: 30%;
+  top: 0%;
 }
 
 /* コンテンツ部分 */
