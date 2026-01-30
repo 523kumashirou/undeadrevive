@@ -69,9 +69,9 @@ nav a:active {
 
 
 body{
-	background-color: white;
-  width: 1280px;
-  margin: 0 auto;
+background-color: white;
+width: 1280px;
+margin: 0 auto;
 }
 
  /*  @media (max-width: 600px) {
@@ -88,7 +88,7 @@ body{
 .hero-image {
 	width: 90%;
 	height: auto;
-	display: block;
+	display: flex;
 	margin: 0 auto;
 	max-width: 1200px;
 }
@@ -348,125 +348,6 @@ text-align: center;
   transform: translateY(-2px);
 }
 
-/* ====== FOOTER ====== */
-footer {
-
-  background: black; /* 漆黒寄りの黒 */
-  color: lightgray;      /* ややくすんだ白文字 */
-  text-align: center;
-  padding: 3rem 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  font-family: "Saira Condensed", "Zen Kaku Gothic New", sans-serif;
-  letter-spacing: 0.04em;
-  box-sizing: border-box;
-}
-
-/* 内側コンテナ（幅を制限して中央寄せ） */
-footer .footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 90%;
-}
-
-/* ロゴ（上部） */
-footer .logo {
-  margin: 0;
-}
-footer .logo a {
-  color: #fff;
-  font-size: 1.6rem;
-  font-weight: 700;
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 0.6rem;
-  transition: opacity 0.2s ease, transform 0.15s ease;
-}
-footer .logo a:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
-
-/* クレジット（小さめ） */
-.footer-credit {
-  margin: 0.2rem 0 1rem;
-  color: lightgray;
-  font-size: 0.85rem;
-}
-
-/* リンク群（ナビ） */
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-  margin: 1rem 0;
-}
-.footer-links a {
-  color: lightgray;
-  text-decoration: none;
-  font-size: 0.95rem;
-  padding: 6px 10px;
-  border-radius: 6px;
-  transition: background 0.18s ease, color 0.18s ease, transform 0.12s ease;
-}
-.footer-links a:hover,
-.footer-links a:focus {
-  background: rgba(255,255,255,0.03);
-  color: #fff;
-  transform: translateY(-2px);
-}
-
-/* SNS */
-.footer-social {
-  margin: 0.8rem 0;
-  color: lightgray;
-  font-size: 0.95rem;
-}
-.footer-social a {
-  color: lightgray;
-  text-decoration: none;
-  margin: 0 6px;
-  transition: color 0.15s ease, transform 0.12s ease;
-}
-.footer-social a:hover {
-  color: #fff;
-  transform: translateY(-2px);
-}
-
-/* 注意書き／ポリシー等（小さいグレー文字） */
-.footer-note {
-  margin-top: 1.2rem;
-  color: lightgray;
-  font-size: 0.7rem;
-  line-height: 1.4;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* 小画面用に縦並びに */
-/* @media (max-width: 640px) {
-  footer {
-    padding: 2rem 0.8rem;
-  }
-
-  footer .logo a {
-    font-size: 1.4rem;
-  }
-
-  .footer-links {
-    gap: 12px;
-  }
-
-  .footer-links a {
-    font-size: 0.9rem;
-    padding: 6px 8px;
-  }
-
-  .footer-social {
-    font-size: 0.9rem;
-  }
-}*/
 
 
 
@@ -474,11 +355,11 @@ footer .logo a:hover {
 
 /*キャラクターhtml*/	 
 html, body {
-  overflow-x: hidden; /* 横スクロール禁止 */
+  margin: 0;
+  padding: 0;
   width: 100%;
-  box-sizing: border-box;
+  overflow-x: hidden;
 }
-
 
 /* 緋桐 */
 
@@ -566,7 +447,7 @@ html, body {
   text-align: left;
   margin-left: 10px; 
   justify-content: center;
- 
+
 }
 
 /* プロフィール説明 */
@@ -577,7 +458,6 @@ html, body {
   font-size: 0.9rem;
   line-height: 1.6;
   margin: auto 0; /* ← 中央寄せ＆上に少し余白 */
-  text-align: left;
   position: relative;
   z-index: 2; 
 }
@@ -587,6 +467,7 @@ html, body {
   padding: 6px 10px;
   margin: 6px 0;
   background: rgba(255,255,255,0.03);
+  text-align: left !important;
 }
 
 /* セリフ */
@@ -629,6 +510,7 @@ html, body {
   transform: translateY(-2px);
 }
 
+
 /* モーダル全体 */
 .past-modal {
 	overflow: auto;
@@ -669,6 +551,7 @@ html, body {
   color: black;
 }
 
+
 /* 過去カード */
 .past-timeline {
   margin-top: 10px;
@@ -700,43 +583,53 @@ html, body {
 
 
 /* ファクターについて */
-.ability-box {
-  width: 90%;
-  max-width: 700px;
-  margin: 30px auto 0;
-  border-radius: 12px;
-  padding: 20px 25px;
-  color: white;
-  text-align: left;
-  box-sizing: border-box;
- border: 2px solid #ff0000; 
+.character-card {
+  width: 400px;
 }
 
-.ability-box h2 {
+.description {
+  margin-bottom: 10px;
+}
+
+.description summary {
+  cursor: pointer;
+  list-style: none;
+margin-top: 20px;
+	text-align: center;
+	
   font-family: "Saira Condensed", sans-serif;
-  text-align: center;
-  color: #ff0000;
-  font-size: 2rem;
   letter-spacing: 1px;
-  margin-bottom: 0;
+  font-weight: 600;
+	color: #ff0000;
 }
 
-.ability-data p {
-  text-align: center;
-  margin: 0 auto;
-  width: 100%;
-  font-size: 0.95rem;
-  line-height: 1.2;
+.description summary::-webkit-details-marker {
+  display: none; /* ▶︎ マーカー消す */
+}
+
+.description summary:hover {
+  transform: translateY(-2px);
+}
+
+.description[open] p {
+  margin-top: 10px;
+  opacity: 1;
+text-align: left;
 }
 
 
 
 /* ===== 関係性ログセクション ===== */
+
 .relationship-section {
   text-align: center;
-  margin-top: 30px;
-  position: relative;
-  z-index: 10; 
+  margin-top: 10px;
+  /*position: relative; */
+  /*z-index: 10;*/
+}
+
+section.relationship-section h2 {
+  color: black;
 }
 
 .timeline-container {
@@ -790,7 +683,7 @@ html, body {
   max-height: 80vh; /* ← 高さ制限 */
   overflow-y: auto; /* ← スクロール可能に */
   color: white;
-  position: relative;
+   /*position: relative; */
 }
 
 .relationship-popup.active {
@@ -805,7 +698,6 @@ html, body {
   text-align: center;
   margin-bottom: 10px;
 }
-
 
 .relationship-popup p {
   line-height: 1.6;
@@ -831,20 +723,16 @@ html, body {
   max-height: 70vh;
 }
 
-
 .relationship-popup.active {
   display: block;
 }
 
-
 .relationship-popup .popup-content h2 {
-  color: #ff0000;
+  color: black;
   text-align: center;
   font-size: 1.4rem;
   margin-bottom: 15px;
 }
-
-
 
 .popup-box {
   display: flex;
@@ -885,8 +773,8 @@ html, body {
   line-height: 1.2;
   color: black;
   font-size: 0.95rem;
+  text-align: left !important;
 }
-
 
 /* 閉じるボタン */
 .close-btn {
@@ -902,77 +790,128 @@ html, body {
 .close-btn:hover {
   transform: scale(1.2);
 }
-/* 追加ファクターポップアップ */
-/* 能力トリガーボタン */
-.ability-trigger {
+
+
+/* ====== FOOTER ====== */
+footer {
+  background: black; /* 漆黒寄りの黒 */
   text-align: center;
-  margin-top: 20px;
+  padding: 1rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-family: "Saira Condensed", "Zen Kaku Gothic New", sans-serif;
+  letter-spacing: 0.04em;
+  box-sizing: border-box;
+  margin-top: auto;
+  width: 100vw;  
 }
 
-.ability-trigger button {
-  background: var(--accent-color, #ff0000);
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 0.95rem;
-  transition: background 0.3s ease, transform 0.2s ease;
-  font-family: "Saira Condensed", sans-serif;
-  letter-spacing: 1px;
-  font-weight: 600;
+/* 内側コンテナ（幅を制限して中央寄せ） */
+footer .footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
 }
 
-.ability-trigger button:hover {
-  background: black;
+/* ロゴ（上部） */
+footer .logo {
+  margin: 0!important;
+margin-top: 1.2rem!important;
+}
+footer .logo a {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+footer .logo a:hover {
+  opacity: 0.9;
   transform: translateY(-2px);
 }
 
-/* ポップアップ全体 */
-.ability-modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  overflow: auto; /* 内部スクロールを許可 */
+/* クレジット（小さめ） */
+.footer-credit {
+   margin: 0 auto;
+  color: lightgray!important;
+  font-size: 0.85rem!important;;
 }
 
-/* コンテンツ部分 */
-.ability-content {
-  background: white;
-  border-left: 5px solid var(--accent-color, #ff0000);
-  border-radius: 16px;
-  padding: 25px 30px;
-  max-width: 600px;
-  margin: 30% auto;
-  text-align: left;
-  position: relative;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  animation: fadeIn 0.3s ease;
-	
+/* リンク群（ナビ） */
+.footer-links {
   display: flex;
-  justify-content: center;  /* 横中央 */
-  align-items: center;      /* 縦中央 */
-  min-height: 80vh;        /* 画面全体の高さ基準で中央寄せ */
-  padding: 20px;
-  box-sizing: border-box;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 1rem 0;
 }
-
-.ability-content h2 {
-  color: var(--accent-color, #ff0000);
-  text-align: center;
-  font-family: "Saira Condensed", sans-serif;
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-}
-
-.ability-content p {
-  color: black;
+.footer-links a {
+  color: lightgray;
+  text-decoration: none;
   font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.12s ease;
 }
+.footer-links a:hover,
+.footer-links a:focus {
+  background: rgba(255,255,255,0.03);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* SNS */
+.footer-social {
+  margin: 0.8rem 0;
+  color: lightgray;
+  font-size: 0.95rem;
+}
+.footer-social a {
+  color: lightgray;
+  text-decoration: none;
+  margin: 0 6px;
+  transition: color 0.15s ease, transform 0.12s ease;
+}
+.footer-social a:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* 注意書き／ポリシー等（小さいグレー文字） */
+.footer-note {
+  margin-top: 1.2rem!important;
+  color: lightgray!important;
+  font-size: 0.7rem!important;
+  line-height: 1.4;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 小画面用に縦並びに */
+/* @media (max-width: 640px) {
+  footer {
+    padding: 2rem 0.8rem;
+  }
+
+  footer .logo a {
+    font-size: 1.4rem;
+  }
+
+  .footer-links {
+    gap: 12px;
+  }
+
+  .footer-links a {
+    font-size: 0.9rem;
+    padding: 6px 8px;
+  }
+
+  .footer-social {
+    font-size: 0.9rem;
+  }
+}*/
+
 
 
 
@@ -1011,17 +950,50 @@ html, body {
  border-left: 5px solid #1620A2;
 }
 
-
-#mikage .ability-box {
-  border: 2px solid #1620A2;
-}
-
-#mikage .ability-box h2 {
-  color: #1620A2;
-}
-
 #mikage .timeline-btn {
   background-color: #1620A2;
+}
+
+
+
+/* ファクターについて */
+.character-card-mikage {
+  width: 400px;
+}
+
+.description-mikage {
+  margin-bottom: 10px;
+}
+
+.description-mikage summary {
+  cursor: pointer;
+  list-style: none;
+margin-top: 20px;
+text-align: center;
+	
+  font-family: "Saira Condensed", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+	color: #1620A2;
+}
+
+.description-mikage summary::-webkit-details-marker {
+  display: none; /* ▶︎ マーカー消す */
+}
+
+.description-mikage summary:hover {
+  transform: translateY(-2px);
+}
+
+.description-mikage[open] p {
+  margin-top: 10px;
+  opacity: 1;
+text-align: left;
+}
+
+
+#mikage section.relationship-section h2 {
+  color: black;
 }
 
 #mikage .relationship-popup {
@@ -1072,16 +1044,49 @@ html, body {
   background: #7e07eb;
 }
 
-#shino .ability-box {
-  border: 2px solid #7e07eb;
-}
-
-#shino .ability-box h2 {
-  color: #7e07eb;
-}
-
 #shino .timeline-btn {
   background-color: #7e07eb;
+}
+
+
+/* ファクターについて */
+.character-card-shino {
+  width: 400px;
+}
+
+.description-shino {
+  margin-bottom: 10px;
+}
+
+.description-shino summary {
+  cursor: pointer;
+  list-style: none;
+margin-top: 20px;
+text-align: center;
+	
+  font-family: "Saira Condensed", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+	color: #7e07eb;
+}
+
+.description-shino summary::-webkit-details-marker {
+  display: none; /* ▶︎ マーカー消す */
+}
+
+.description-shino summary:hover {
+  transform: translateY(-2px);
+}
+
+.description-shino[open] p {
+  margin-top: 10px;
+  opacity: 1;
+text-align: left;
+}
+
+
+#shino section.relationship-section h2 {
+  color: black;
 }
 
 #shino .relationship-popup {
@@ -1097,36 +1102,92 @@ html, body {
   cursor: not-allowed;
 }
 
+
+
 /* 純 */
+#jun .ability-trigger button,
+#jun  .ability-content {
+  --accent-color: #fff901;
+}
 #jun h2{
 	color: #fff901;
 }
-#jun {
-  --accent-color: #fff901; /* 黄色アクセント */
+
+#jun .profile-box p {
+  border-left: 3px solid #fff901;
+  background: rgba(255,255,255,0.03);
 }
 
-/* プロフィール・セリフ・ボタンなど色上書き */
-#jun .profile-box p { border-left-color: var(--accent-color); }
-#jun .quote-box { color: var(--accent-color); }
-#jun .past-trigger button { background: var(--accent-color); color: black; }
-#jun .past-card { border-left-color: var(--accent-color); }
-#jun .past-age { background: var(--accent-color); color: black; }
-#jun .ability-box { border-color: var(--accent-color); }
-#jun .ability-box h2 { color: var(--accent-color); }
-#jun .timeline-btn { background-color: var(--accent-color); color: black; }
-#jun .relationship-popup { border-color: var(--accent-color); }
-#jun .relationship-popup .popup-content h2 { color: var(--accent-color); }
-#jun .ability-trigger button { background: var(--accent-color); color: black; }
-#jun .ability-content h2 { color: var(--accent-color); }
+#jun .quote-box {
+  color: #fff901;
+}
 
-/* ホバーも統一 */
-#jun .past-trigger button:hover,
-#jun .timeline-btn:hover,
-#jun .ability-trigger button:hover {
+#jun .past-trigger button {
+  background: #fff901;
+color: black;
+}
+
+#jun .past-trigger button:hover {
   background: black;
-  color: var(--accent-color);
+	color: white;
+}
+
+#jun .timeline-btn {
+  background-color: #fff901;
+	color: black;
+}
+#jun .timeline-btn:hover {
+  background: black;
+  color: white;
   transform: translateY(-2px);
-color: white;
+}
+
+/* ファクターについて */
+.character-card-jun {
+  width: 400px;
+}
+
+.description-jun {
+  margin-bottom: 10px;
+}
+
+.description-jun summary {
+  cursor: pointer;
+  list-style: none;
+margin-top: 20px;
+text-align: center;
+	
+  font-family: "Saira Condensed", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+	color: #fff901;
+}
+
+.description-jun summary::-webkit-details-marker {
+  display: none; /* ▶︎ マーカー消す */
+}
+
+.description-jun summary:hover {
+  transform: translateY(-2px);
+}
+
+.description-jun[open] p {
+  margin-top: 10px;
+  opacity: 1;
+text-align: left;
+}
+
+
+#jun section.relationship-section h2 {
+  color: black;
+}
+
+#jun .relationship-popup {
+  border: 2px solid #fff901;
+}
+
+#jun .relationship-popup.popup-content h2 {
+  color: #fff901;
 }
 
 #jun .coming-soon {
@@ -1134,6 +1195,7 @@ color: white;
   cursor: not-allowed;
 	color: white;
 }
+
 
 /* 冴月 */
 
@@ -1180,17 +1242,48 @@ color: white;
   color: white;
 }
 
-/* ファクター説明 */
-#satsuki .ability-box {
-  border: 2px solid #1afa08;
-  color: white;
+
+/* ファクターについて */
+.character-card-satsuki {
+  width: 400px;
 }
 
-#satsuki .ability-box h2 {
-  color: #1afa08;
+.description-satsuki {
+  margin-bottom: 10px;
 }
+
+.description-satsuki summary {
+  cursor: pointer;
+  list-style: none;
+margin-top: 20px;
+text-align: center;
+	
+  font-family: "Saira Condensed", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+	color: #1afa08;
+}
+
+.description-satsuki summary::-webkit-details-marker {
+  display: none; /* ▶︎ マーカー消す */
+}
+
+.description-satsuki summary:hover {
+  transform: translateY(-2px);
+}
+
+.description-satsuki[open] p {
+  margin-top: 10px;
+  opacity: 1;
+text-align: left;
+}
+
 
 /* 関係性セクション */
+
+#satsuki section.relationship-section h2 {
+  color: black;
+}
 #satsuki .timeline-btn {
   background: #1afa08;
   color: white;
@@ -1230,6 +1323,8 @@ color: white;
   background-color: black;
   cursor: not-allowed;
 }
+
+
 /* 橙空 */
 #toa h2{
 	color: #fd7e02;
@@ -1273,17 +1368,46 @@ color: white;
   color: white;
 }
 
-/* ファクター説明 */
-#toa .ability-box {
-  border: 2px solid #fd7e02;
-  color: white;
+/* ファクターについて */
+.character-card-toa {
+  width: 400px;
 }
 
-#toa .ability-box h2 {
-  color: #fd7e02;
+.description-toa {
+  margin-bottom: 10px;
 }
+
+.description-toa summary {
+  cursor: pointer;
+  list-style: none;
+margin-top: 20px;
+text-align: center;
+	
+  font-family: "Saira Condensed", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+	color: #fd7e02;
+}
+
+.description-toa summary::-webkit-details-marker {
+  display: none; /* ▶︎ マーカー消す */
+}
+
+.description-toa summary:hover {
+  transform: translateY(-2px);
+}
+
+.description-toa[open] p {
+  margin-top: 10px;
+  opacity: 1;
+text-align: left;
+}
+
 
 /* 関係性セクション */
+#toa section.relationship-section h2 {
+  color: black;
+}
 #toa .timeline-btn {
   background: #fd7e02;
   color: white;
@@ -1379,17 +1503,46 @@ color: white;
   color: white;
 }
 
-/* ファクター説明 */
-#hakua .ability-box {
-  border: 2px solid #6ad4fe;
-  color: white;
+/* ファクターについて */
+.character-card-hakua {
+  width: 400px;
 }
 
-#hakua .ability-box h2 {
-  color: #6ad4fe;
+.description-hakua {
+  margin-bottom: 10px;
 }
+
+.description-hakua summary {
+  cursor: pointer;
+  list-style: none;
+margin-top: 20px;
+text-align: center;
+	
+  font-family: "Saira Condensed", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+	color: #6ad4fe;
+}
+
+.description-hakua summary::-webkit-details-marker {
+  display: none; /* ▶︎ マーカー消す */
+}
+
+.description-hakua summary:hover {
+  transform: translateY(-2px);
+}
+
+.description-hakua[open] p {
+  margin-top: 10px;
+  opacity: 1;
+text-align: left;
+}
+
 
 /* 関係性セクション */
+#hakua section.relationship-section h2 {
+  color: black;
+}
 #hakua .timeline-btn {
   background: #6ad4fe;
   color: white;
@@ -1485,11 +1638,13 @@ color: white;
 }
 
 /* 関係性セクション */
+#lobe section.relationship-section h2 {
+  color: black;
+}
 #lobe .timeline-btn {
   background: #ca4dbc;
   color: white;
 }
-
 #lobe .timeline-btn:hover {
   background: black;
   color: white;
@@ -1537,10 +1692,9 @@ color: white;
   margin: 30px auto 0; /* ← この margin-top:30px を活かす */
   padding: 10px;
   width: 100%;
-  position: relative;
-  z-index: 1; /* ← ポップアップより下げすぎないように1→2 */
-  margin-top: 100px;
-}
+  /*position: relative;
+  /* z-index: 1; /* ← ポップアップより下げすぎないように1→2 */
+} 
 
 .character-nav img {
   width: 80px;
@@ -1548,7 +1702,7 @@ color: white;
   border-radius: 50%;
   cursor: pointer;
   transition: transform 0.3s ease, opacity 0.3s ease;
-}
+} 
 
 .character-nav img:hover {
   transform: scale(1.1);
@@ -1667,6 +1821,7 @@ margin-bottom: 40px;
     grid-gap: 10px;
     max-width: 340px;
     margin-top: 40px; /* ←ここで余白を詰める */
+
   }
 
   .character-nav img {
@@ -1687,7 +1842,6 @@ margin-bottom: 40px;
   .profile-box {
     font-size: 0.8rem;
   }
-}*/
 
 
 /*世界観html*/
@@ -1721,6 +1875,7 @@ padding-bottom: 20px;
   line-height: 1.5;
   letter-spacing: 0.3px;
   position: relative;
+	text-align: left;
 }
 
 .world-note.data::before {
@@ -1751,6 +1906,7 @@ padding-bottom: 20px;
   border-left: 5px solid black;
   padding-left: 12px;
   margin-bottom: 15px;
+text-align: left;
 }
 
 .world-block p {
@@ -1758,6 +1914,7 @@ padding-bottom: 20px;
   font-size: 1rem;
   line-height: 1.8;
   margin: 0;
+text-align: left;
 }
 
 
@@ -1832,7 +1989,6 @@ padding-bottom: 20px;
   background-color: dimgray;
   transform: translateY(-2px);
 }
-
 
 
 
