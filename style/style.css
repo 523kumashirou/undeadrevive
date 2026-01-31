@@ -1786,20 +1786,20 @@ margin-bottom: 40px;
     margin-top: 80px; /* ←タブレットは少し余裕を持たせる */
   }
 
-  .character-nav img {
+  /*.character-nav img {
     width: 65px;
     height: 65px;
   }
 
   /* 横並び維持＋整列 */
-  .content {
+ /*  .content {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-  }
+  }*/
 
   .main-image {
     width: 180px;
