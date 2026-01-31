@@ -360,15 +360,13 @@ text-align: center;
 
 
 
-
+/* 緋桐 */
 /*キャラクターhtml*/	 
 html, body {
   overflow-x: hidden; /* 横スクロール禁止 */
   width: 100%;
   box-sizing: border-box;
 }
-
-/* 緋桐 */
 
 /* タイトルボックス */
 .title-box {
@@ -383,7 +381,7 @@ html, body {
   width: 100%;
   height: auto;
   min-height: 650px;
-  padding-bottom: 300px; 
+  padding-bottom: 0; 
 }
 
 /* スライド1枚 */
@@ -393,9 +391,6 @@ html, body {
   left: 0;
   width: 100%;
   opacity: 0;
-  transform: translateX(100%);
-  transition: transform 0.6s ease, opacity 0.6s ease;
-  z-index: 0;
   pointer-events: none;
   visibility: hidden;
   display: flex;
@@ -405,8 +400,6 @@ html, body {
 
 .character-slide.active {
   opacity: 1;
-  transform: translateX(0);
-  z-index: 1;
   pointer-events: auto;
   visibility: visible;
 }
@@ -459,7 +452,7 @@ html, body {
 
 /* プロフィール説明 */
 .profile-box {
-  max-width: 600px;
+  max-width: 100%;
   border-radius: 10px;
   padding: 10px 15px;
   font-size: 0.9rem;
@@ -544,20 +537,6 @@ html, body {
   animation: fadeIn 0.3s ease;
 }
 
-/* 閉じるボタン */
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 1.5rem;
-  color: black;
-  cursor: pointer;
-}
-
-.close-btn:hover {
-  color: black;
-}
-
 
 /* 過去カード */
 .past-timeline {
@@ -628,15 +607,9 @@ text-align: left;
 
 /* ===== 関係性ログセクション ===== */
 
-.relationship-section {
-  text-align: center;
-  margin-top: 10px;
-  /*position: relative; */
-  /*z-index: 10;*/
-}
-
 section.relationship-section h2 {
   color: black;
+  text-align: center;
 }
 
 .timeline-container {
@@ -669,13 +642,6 @@ section.relationship-section h2 {
 }
 
 /* ===== ポップアップ全体 ===== */
-.relationship-popup {
-  display: none;
-  position: absolute;
-  left: 50%;                     /* 横は画面の中央 */
-  transform: translate(-50%,-100%);   /* 中央寄せ */
-  max-width: 350px;
-}
 
 .relationship-popup.active {
   display: block;
@@ -685,16 +651,12 @@ section.relationship-section h2 {
   border-radius: 12px;
   padding: 30px;
   text-align: left;
-  width: 80%; 
+  width: 80%;
   max-width: 900px;
   max-height: 80vh; /* ← 高さ制限 */
   overflow-y: auto; /* ← スクロール可能に */
   color: white;
    /*position: relative; */
-}
-
-.relationship-popup.active {
-  display: block;
 }
 
 .relationship-popup h2 {
@@ -730,17 +692,6 @@ section.relationship-section h2 {
   max-height: 70vh;
 }
 
-.relationship-popup.active {
-  display: block;
-}
-
-.relationship-popup .popup-content h2 {
-  color: black;
-  text-align: center;
-  font-size: 1.4rem;
-  margin-bottom: 15px;
-}
-
 .popup-box {
   display: flex;
   align-items: center; /* アイコンとテキストを縦方向中央揃え */
@@ -762,17 +713,6 @@ section.relationship-section h2 {
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
-}
-
-.popup-box.popup-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* h3とpを縦方向中央に配置 */
-}
-
-.relationship-popup .popup-box h3 {
-  margin: 0 0 2px 0; 
-  font-size: 1.1rem;
 }
 
 .relationship-popup .popup-box p {
@@ -800,51 +740,40 @@ section.relationship-section h2 {
 
 
 /* ====== FOOTER ====== */
-footer {
-  background: black; /* 漆黒寄りの黒 */
-  text-align: center;
-  padding: 1rem 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  font-family: "Saira Condensed", "Zen Kaku Gothic New", sans-serif;
-  letter-spacing: 0.04em;
-  box-sizing: border-box;
-  margin-top: auto;
-  width: 100vw;  
+footer{
+	background: black; 
+	text-align: center;
+	padding: 1rem 1rem;
+	font-family: "Saira Condensed", "Zen Kaku Gothic New", sans-serif;
+	letter-spacing: 0.04em;
+	box-sizing: border-box;
+	width: 100%; 
 }
 
-/* 内側コンテナ（幅を制限して中央寄せ） */
-footer .footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 90%;
+footer .logo{
+margin: 0;
+margin-top: 1.2rem;
 }
 
-/* ロゴ（上部） */
-footer .logo {
-  margin: 0!important;
-margin-top: 1.2rem!important;
-}
 footer .logo a {
   color: #fff;
   font-size: 1.6rem;
   font-weight: 700;
   text-decoration: none;
   display: inline-block;
-  transition: opacity 0.2s ease, transform 0.15s ease;
 }
+
 footer .logo a:hover {
   opacity: 0.9;
   transform: translateY(-2px);
 }
 
-/* クレジット（小さめ） */
 .footer-credit {
    margin: 0 auto;
-  color: lightgray!important;
-  font-size: 0.85rem!important;;
+  color: lightgray;
+  font-size: 0.85rem;
 }
 
-/* リンク群（ナビ） */
 .footer-links {
   display: flex;
   justify-content: center;
@@ -852,6 +781,7 @@ footer .logo a:hover {
   flex-wrap: wrap;
   margin: 1rem 0;
 }
+
 .footer-links a {
   color: lightgray;
   text-decoration: none;
@@ -860,6 +790,7 @@ footer .logo a:hover {
   border-radius: 6px;
   transition: background 0.18s ease, color 0.18s ease, transform 0.12s ease;
 }
+
 .footer-links a:hover,
 .footer-links a:focus {
   background: rgba(255,255,255,0.03);
@@ -867,33 +798,33 @@ footer .logo a:hover {
   transform: translateY(-2px);
 }
 
-/* SNS */
 .footer-social {
   margin: 0.8rem 0;
   color: lightgray;
   font-size: 0.95rem;
 }
+
 .footer-social a {
   color: lightgray;
   text-decoration: none;
   margin: 0 6px;
   transition: color 0.15s ease, transform 0.12s ease;
 }
+
 .footer-social a:hover {
   color: #fff;
   transform: translateY(-2px);
 }
 
-/* 注意書き／ポリシー等（小さいグレー文字） */
 .footer-note {
-  margin-top: 1.2rem!important;
-  color: lightgray!important;
-  font-size: 0.7rem!important;
+  margin-top: 1.2rem;
+  color: lightgray;
+  font-size: 0.7rem;
   line-height: 1.4;
-  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
+
 
 /* 小画面用に縦並びに */
 /* @media (max-width: 640px) {
