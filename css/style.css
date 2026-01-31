@@ -70,7 +70,7 @@ nav a:active {
 
 body{
 background-color: white;
-width: 1280px;
+  width: 1280px;
 margin: 0 auto;
 }
 
@@ -86,12 +86,21 @@ margin: 0 auto;
 }*/
 
 .hero-image {
-	width: 90%;
-	height: auto;
-	display: flex;
-	margin: 0 auto;
-	max-width: 1200px;
+  width: 90%!important; /* 横幅を画面に合わせる */
+  max-width: 1200px;    /* 最大幅 */
+  height: auto;          /* 縦横比維持 */
+  display: block;        /* blockにして中央配置を効かせる */
+  margin: 0 auto;        /* 横中央 */
+  border: 3px solid red; /* 確認用 */
 }
+.hero-image {
+  width: 90%;           /* 横幅を画面に合わせる */
+  max-width: 1200px;    /* 最大幅 */
+  height: auto;          /* 縦横比維持 */
+  display: block;        /* blockにして中央配置を効かせる */
+  margin: 0 auto;        /* 横中央 */
+}
+
 
 .hero-box {
 	width: 90%;
@@ -100,7 +109,7 @@ margin: 0 auto;
 	padding: 1px;
 	background-color: black;
 	text-align: center;
-	
+
 	font-size: 15px;
 	color: white;
 	margin-bottom: 10px;
@@ -109,7 +118,6 @@ margin: 0 auto;
 	align-items: center;
 }
 
-/* CSSだけなら単純に重ね書き */
 
 .character-list h2{
   width: 90%;
@@ -354,11 +362,10 @@ text-align: center;
 
 
 /*キャラクターhtml*/	 
-html, body {
-  margin: 0;
-  padding: 0;
+character.html, body {
+  overflow-x: hidden; /* 横スクロール禁止 */
   width: 100%;
-  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 /* 緋桐 */
