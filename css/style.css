@@ -366,6 +366,8 @@ character.html, body {
   overflow-x: hidden; /* 横スクロール禁止 */
   width: 100%;
   box-sizing: border-box;
+background-color: white;
+margin: 0 auto;
 }
 
 /* 緋桐 */
