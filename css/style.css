@@ -362,7 +362,7 @@ text-align: center;
 
 
 /*キャラクターhtml*/	 
-character.html, body {
+html, body {
   overflow-x: hidden; /* 横スクロール禁止 */
   width: 100%;
   box-sizing: border-box;
