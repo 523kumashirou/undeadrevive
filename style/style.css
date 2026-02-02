@@ -356,389 +356,6 @@ text-align: center;
   transform: translateY(-2px);
 }
 
-
-
-
-
-/* 緋桐 */
-/*キャラクターhtml*/	 
-html, body {
-  overflow-x: hidden; /* 横スクロール禁止 */
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* タイトルボックス */
-.title-box {
-  text-align: center;
-  margin-bottom: 0;
-}
-
-/* スライダー全体 */
-.character-slider {
-  position: relative;
-  overflow: visible;
-  width: 100%;
-  height: auto;
-  min-height: 650px;
-  padding-bottom: 0; 
-}
-
-/* スライド1枚 */
-.character-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;	
-}
-
-.character-slide.active {
-  opacity: 1;
-  pointer-events: auto;
-  visibility: visible;
-}
-
-.character-slide.slide-out-right {
-  transform: translateX(-100%);
-  opacity: 0;
-}
-
-/* スライド中身 */
-.slide-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-gap: 15px;
-  position: relative;
-  z-index: 2; 
-}
-
-/* 上部：画像と情報 */
-.content {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  grid-gap: 0px;
-  flex-wrap: nowrap; /* ← 縦に並ばないように */
-  width: 100%;
-}
-
-/* メイン画像 */
-.main-image {
-  width: 200px;
- 
-  border-radius: 10px;
-  margin: 0;
-  flex-shrink: 0; /* 潰れ防止 */
-  object-fit: cover;  
-}
-
-/* テキストボックス */
-.text-box {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  margin-left: 10px; 
-  justify-content: center;
-
-}
-
-/* プロフィール説明 */
-.profile-box {
-  max-width: 100%;
-  border-radius: 10px;
-  padding: 10px 15px;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  margin: auto 0; /* ← 中央寄せ＆上に少し余白 */
-  position: relative;
-  z-index: 2; 
-}
-
-.profile-box p {
-  border-left: 3px solid #ff0000;
-  padding: 6px 10px;
-  margin: 6px 0;
-  background: rgba(255,255,255,0.03);
-  text-align: left !important;
-}
-
-/* セリフ */
-.quote-box {
-  margin-top: 10px;
-  text-align: center;
-  font-style: italic;
-  font-size: 1rem;
-  color: #ff0000; /* キャラのイメージカラー（赤） */
-  letter-spacing: 1px;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 6px;
-  padding: 5px 10px;
-  display: inline-block;
-}
-
-/* ボタン */
-.past-trigger {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.past-trigger button {
-  background: #ff0000;
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 0.95rem;
-  transition: background 0.3s ease;
-	
-  font-family: "Saira Condensed", sans-serif;
-  letter-spacing: 1px;
-  font-weight: 600;
-}
-
-.past-trigger button:hover {
-  background: black;
-  transform: translateY(-2px);
-}
-
-
-/* モーダル全体 */
-.past-modal {
-	overflow: auto;
-  display: none; /* 非表示からスタート */
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-}
-
-/* 内容ボックス */
-.past-content {
-  background: rgba(255,255,255,0.9);
-  border-radius: 16px;
-  padding: 25px 30px;
-  max-width: 600px;
-  margin: 10% auto;
-  text-align: left;
-  position: relative;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  animation: fadeIn 0.3s ease;
-}
-
-
-/* 過去カード */
-.past-timeline {
-  margin-top: 10px;
-}
-
-.past-card {
-  background: #fff;
-  border-left: 5px solid #ff0000;
-  border-radius: 10px;
-  padding: 10px 15px;
-  margin: 10px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.past-age {
-  display: inline-block;
-  background: #ff0000;
-  color: #fff;
-  font-size: 0.8rem;
-  padding: 2px 6px;
-  border-radius: 5px;
-  margin-bottom: 4px;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(-20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-
-/* ファクターについて */
-.character-card {
-  width: 400px;
-}
-
-.description {
-  margin-bottom: 10px;
-}
-
-.description summary {
-  cursor: pointer;
-  list-style: none;
-margin-top: 20px;
-	text-align: center;
-	
-  font-family: "Saira Condensed", sans-serif;
-  letter-spacing: 1px;
-  font-weight: 600;
-	color: #ff0000;
-}
-
-.description summary::-webkit-details-marker {
-  display: none; /* ▶︎ マーカー消す */
-}
-
-.description summary:hover {
-  transform: translateY(-2px);
-}
-
-.description[open] p {
-  margin-top: 10px;
-  opacity: 1;
-text-align: left;
-}
-
-
-
-/* ===== 関係性ログセクション ===== */
-
-section.relationship-section h2 {
-  color: black;
-  text-align: center;
-}
-
-.timeline-container {
-  display: flex;
-  justify-content: center;
-  grid-gap: 15px;
-  margin-top: 15px;
-}
-
-.timeline-btn {
-  background-color: #ff0000;
-  color: white;
-  border: none;
-  padding: 10px 25px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-family: "Saira Condensed", sans-serif;
-  font-size: 18px;
-  transition: all 0.3s ease;
-}
-
-.timeline-btn:hover {
-  background: black !important;
-  transform: translateY(-2px);
-}
-
-.coming-soon {
-  background-color: black;
-  cursor: not-allowed;
-}
-
-/* ===== ポップアップ全体 ===== */
-
-.relationship-popup.active {
-  display: block;
-}
-
-.relationship-popup .popup-content {
-  border-radius: 12px;
-  padding: 30px;
-  text-align: left;
-  width: 80%;
-  max-width: 900px;
-  max-height: 80vh; /* ← 高さ制限 */
-  overflow-y: auto; /* ← スクロール可能に */
-  color: white;
-   /*position: relative; */
-}
-
-.relationship-popup h2 {
-  all: unset; /* ← 全ての継承・装飾をリセット */
-  display: block;
-  font-size: 1.3rem;
-  color: white;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.relationship-popup p {
-  line-height: 1.6;
-  font-size: 0.95rem;
-}
-
-/* ===== ポップアップ内の関係ボックス ===== */
-.relationship-popup {
-  display: none;
-  position: fixed;
-  top: 50%; /* 中央 */
-  left: 50%;
-  transform: translate(-50%, 10%); /* 完全中央 */
-  width: 80%;
-  max-width: 700px;
-  background: rgba(0, 0, 0, 0.9);
-  border: 2px solid #ff0000;
-  border-radius: 12px;
-  padding: 25px 30px;
-  z-index: 2000;
-  color: #fff;
-  overflow-y: auto;
-  max-height: 70vh;
-}
-
-.popup-box {
-  display: flex;
-  align-items: center; /* アイコンとテキストを縦方向中央揃え */
-  grid-gap: 10px;
-  align-items: flex-start;
-  grid-gap: 12px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 10px;
-  padding: 10px 14px;
-  margin-bottom: 12px;
-  transition: background 0.3s ease;
-}
-
-/* アイコン画像 */
-.popup-box .popup-icon {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.relationship-popup .popup-box p {
-  margin: 0;
-  line-height: 1.2;
-  color: black;
-  font-size: 0.95rem;
-  text-align: left !important;
-}
-
-/* 閉じるボタン */
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 1.8rem;
-  color: black;
-  cursor: pointer;
-  background: none;
-  border: none;
-}
-.close-btn:hover {
-  transform: scale(1.2);
-}
-
-
 /* ====== FOOTER ====== */
 footer{
 	background: black; 
@@ -826,6 +443,413 @@ footer .logo a:hover {
 }
 
 
+
+
+
+/* 緋桐 */
+/*キャラクターhtml*/	 
+html, body {
+  overflow-x: hidden; /* 横スクロール禁止 */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* タイトルボックス */
+.title-box {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* スライダー全体 */
+.character-slider {
+  position: relative;
+  overflow: visible;
+  width: 100%;
+  height: auto;
+  min-height: 650px;
+  padding-bottom: 300px;  
+}
+
+/* スライド1枚 */
+.character-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;	
+}
+
+.character-slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.character-slide.slide-out-right {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+/* スライド中身 */
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-gap: 15px;
+  position: relative;
+  z-index: 2; 
+}
+
+/* 上部：画像と情報 */
+.content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  grid-gap: 0px;
+  flex-wrap: nowrap; /* ← 縦に並ばないように */
+  width: 100%;
+}
+
+/* メイン画像 */
+.main-image {
+  width: 200px;
+ 
+  border-radius: 10px;
+  margin: 0;
+  flex-shrink: 0; /* 潰れ防止 */
+  object-fit: cover;  
+}
+
+/* テキストボックス */
+.text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 10px; 
+  justify-content: center;
+
+}
+
+/* プロフィール説明 */
+.profile-box {
+  max-width: 600%;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: auto 0; /* ← 中央寄せ＆上に少し余白 */
+  position: relative;
+  z-index: 2; 
+}
+
+.profile-box p {
+  border-left: 3px solid #ff0000;
+  padding: 6px 10px;
+  margin: 6px 0;
+  background: rgba(255,255,255,0.03);
+  text-align: left;
+}
+
+/* セリフ */
+.quote-box {
+  margin-top: 10px;
+  text-align: center;
+  font-style: italic;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  padding: 5px 10px;
+  display: inline-block;
+}
+
+/* ボタン */
+.past-trigger {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.past-trigger button {
+  background: #ff0000;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
+	
+  font-family: "Saira Condensed", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.past-trigger button:hover {
+  background: black;
+  transform: translateY(-2px);
+}
+
+
+/* モーダル全体 */
+.past-modal {
+	overflow: auto;
+  display: none; /* 非表示からスタート */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* 内容ボックス */
+.past-content {
+  background: rgba(255,255,255,0.9);
+  border-radius: 16px;
+  padding: 25px 30px;
+  max-width: 600px;
+  margin: 10% auto;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+
+
+
+/* 過去カード */
+.past-timeline {
+  margin-top: 10px;
+}
+
+.past-card {
+  background: #fff;
+  border-left: 5px solid #ff0000;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.past-age {
+  display: inline-block;
+  background: #ff0000;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  border-radius: 5px;
+  margin-bottom: 4px;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+
+/* ファクターについて */
+.ability-card {
+  width: 400px;
+}
+
+.description {
+  margin-bottom: 10px;
+}
+
+.description summary {
+  cursor: pointer;
+  list-style: none;
+margin-top: 20px;
+	text-align: center;
+	
+  font-family: "Saira Condensed", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+	color: #ff0000;
+}
+
+.description summary::-webkit-details-marker {
+  display: none; /* ▶︎ マーカー消す */
+}
+
+.description summary:hover {
+  transform: translateY(-2px);
+}
+
+.description[open] p {
+  margin-top: 10px;
+  opacity: 1;
+text-align: left;
+}
+
+
+/* ===== 関係性ログセクション ===== */
+
+.relationship-section {
+  text-align: center;
+  margin-top: 30px;
+  position: relative;
+  z-index: 10; 
+}
+
+section.relationship-section h2 {
+  color: black;
+  text-align: center;
+}
+
+.timeline-container {
+  display: flex;
+  justify-content: center;
+  grid-gap: 15px;
+  margin-top: 15px;
+}
+
+.timeline-btn {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.timeline-btn:hover {
+  background: black !important;
+  transform: translateY(-2px);
+}
+
+.coming-soon {
+  background-color: black;
+  cursor: not-allowed;
+}
+
+/* ===== ポップアップ全体 ===== */
+.relationship-popup {
+  display: none;
+  position: absolute;
+  left: 50%;                     /* 横は画面の中央 */
+  transform: translate(-50%,-100%);   /* 中央寄せ */
+  max-width: 350px;
+}
+
+.relationship-popup.active {
+  display: block;
+}
+
+.relationship-popup .popup-content {
+  border-radius: 12px;
+  padding: 30px;
+  text-align: left;
+  width: 80%;
+  max-width: 900px;
+  max-height: 80vh; /* ← 高さ制限 */
+  overflow-y: auto; /* ← スクロール可能に */
+  color: white;
+   /*position: relative; */
+  position: relative;
+}
+
+.relationship-popup h2 {
+  all: unset; /* ← 全ての継承・装飾をリセット */
+  display: block;
+  font-size: 1.3rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.relationship-popup p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* ===== ポップアップ内の関係ボックス ===== */
+.relationship-popup {
+  display: none;
+  position: fixed;
+  top: 50%; /* 中央 */
+  left: 50%;
+  transform: translate(-50%, 10%); /* 完全中央 */
+  width: 80%;
+  max-width: 700px;
+  background: rgba(0, 0, 0, 0.9);
+  border: 2px solid #ff0000;
+  border-radius: 12px;
+  padding: 25px 30px;
+  z-index: 2000;
+  color: #fff;
+  overflow-y: auto;
+  max-height: 70vh;
+}
+
+.relationship-popup.active {
+  display: block;
+}
+
+.popup-box {
+  display: flex;
+  align-items: center; /* アイコンとテキストを縦方向中央揃え */
+  grid-gap: 10px;
+  align-items: flex-start;
+  grid-gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  transition: background 0.3s ease;
+}
+
+/* アイコン画像 */
+.popup-box .popup-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.relationship-popup .popup-box h3 {
+  margin: 0 0 2px 0; 
+  font-size: 1.1rem;
+}
+.relationship-popup .popup-box p {
+  margin: 0;
+  line-height: 1.2;
+  color: black;
+  font-size: 0.95rem;
+  text-align: left;
+}
+/* 閉じるボタン */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.8rem;
+  color: black;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.close-btn:hover {
+  transform: scale(1.2);
+}
+
+
+
+
 /* 小画面用に縦並びに */
 /* @media (max-width: 640px) {
   footer {
@@ -854,10 +878,6 @@ footer .logo a:hover {
 
 
 /* 海影 */
-#mikage .ability-trigger button,
-#mikage  .ability-content {
-  --accent-color: #1620A2;
-}
 
 #mikage h2{
 	color: #1620A2;
@@ -895,7 +915,7 @@ footer .logo a:hover {
 
 
 /* ファクターについて */
-.character-card-mikage {
+.ability-card-mikage {
   width: 400px;
 }
 
@@ -949,10 +969,7 @@ text-align: left;
 
 
 /* 紫乃 */
-#shino .ability-trigger button,
-#shino  .ability-content {
-  --accent-color: #7e07eb;
-}
+
 #shino h2{
 	color: #7e07eb;
 }
@@ -988,7 +1005,7 @@ text-align: left;
 
 
 /* ファクターについて */
-.character-card-shino {
+.ability-card-shino {
   width: 400px;
 }
 
@@ -1043,10 +1060,6 @@ text-align: left;
 
 
 /* 純 */
-#jun .ability-trigger button,
-#jun  .ability-content {
-  --accent-color: #fff901;
-}
 #jun h2{
 	color: #fff901;
 }
@@ -1081,7 +1094,7 @@ color: black;
 }
 
 /* ファクターについて */
-.character-card-jun {
+.ability-card-jun {
   width: 400px;
 }
 
@@ -1137,11 +1150,6 @@ text-align: left;
 
 /* 冴月 */
 
-#satsuki .ability-trigger button,
-#satsuki .ability-content {
-  --accent-color: #1afa08;
-	color: white;
-}
 #satsuki h2{
 	color: #1afa08;
 }
@@ -1182,7 +1190,7 @@ text-align: left;
 
 
 /* ファクターについて */
-.character-card-satsuki {
+.ability-card-satsuki {
   width: 400px;
 }
 
@@ -1307,7 +1315,7 @@ text-align: left;
 }
 
 /* ファクターについて */
-.character-card-toa {
+.ability-card-toa {
   width: 400px;
 }
 
@@ -1386,18 +1394,9 @@ text-align: left;
   cursor: not-allowed;
 }
 
-#toa .ability-trigger button,
-#toa .ability-content {
-  --accent-color: #fd7e02;
-	color: white;
-}
+
 
 /* 白愛 */
-#hakua .ability-trigger button,
-#hakua .ability-content {
-  --accent-color: #6ad4fe;
-	color: white;
-}
 
 #hakua h2{
 	color: #6ad4fe;
@@ -1442,7 +1441,7 @@ text-align: left;
 }
 
 /* ファクターについて */
-.character-card-hakua {
+.ability-card-hakua {
   width: 400px;
 }
 
@@ -1703,6 +1702,49 @@ margin-bottom: 40px;
   transform: translateY(-2px);
 }
 
+/* 📱タブレット対応 
+@media screen and (max-width: 768px) {
+  .character-slider {
+    min-height: 760px;
+  }
+
+  .character-nav {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    max-width: 400px;
+    margin-top: 80px; /* ←タブレットは少し余裕を持たせる */
+  }
+
+  .character-nav img {
+    width: 65px;
+    height: 65px;
+  }
+
+  /* 横並び維持＋整列 */
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .main-image {
+    width: 180px;
+  }
+
+  .text-box {
+    max-width: 220px;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  .profile-box {
+    max-width: 90%;
+    font-size: 0.85rem;
+  }
+} */
 
 /* 📱タブレット対応 
 @media screen and (max-width: 768px) {
@@ -1748,23 +1790,22 @@ margin-bottom: 40px;
   }
 } */
 
-📱スマホ対応（480px以下）
+/* 📱スマホ対応（480px以下）
 @media screen and (max-width: 480px) {
   .character-slider {
     min-height: 680px; /* スマホ用に少し圧縮 */
   }
 
-/*.character-nav {
-  display: grid; /* ← これが必須 
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  max-width: 340px;
-  margin: 40px auto 0;*/
-}
+  .character-nav {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    max-width: 340px;
+    margin-top: 40px; /* ←ここで余白を詰める */
+  }
 
-  /*.character-nav img {
+  .character-nav img {
     width: 55px;
-    height: 55px;*/
+    height: 55px;
   }
 
   .main-image {
@@ -1780,7 +1821,7 @@ margin-bottom: 40px;
   .profile-box {
     font-size: 0.8rem;
   }
-
+}*/
 
 /*世界観html*/
 
